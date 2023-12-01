@@ -5,7 +5,7 @@
 
 ## 安装依赖
 `
-yarn
+npm install
 `
 
 ## 开发
@@ -13,7 +13,10 @@ yarn
 npm run dev
 `
 
-## 打包build
+## 打包build运行
 `
-npm run build:pro
+npm run build:pro  
 `
+
+## 直接运行
+
