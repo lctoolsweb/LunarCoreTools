@@ -17,8 +17,8 @@ const datav = reactive([
   { name: '怪物生成', path: "/start/monster" },
   { name: '其它', path: "/start/other" },
   { name: '光锥', path: "/start/weapon" },
-    { name: '物品', path: "/start/thing" },
-    { name: '角色(咕咕中.....)', path: "/start/avatar" },
+  { name: '物品', path: "/start/thing" },
+  { name: '角色', path: "/start/avatar" },
   // { name: '角色属性', path: "/start/role" },
 ])
 

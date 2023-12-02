@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
 import Header from '@/components/Header/index.vue'
 import startnav from './components/startnav.vue'
-import commuse from './components/avatar.vue'
+import avatar from './components/avatar.vue'
 
 
 </script>
@@ -11,7 +10,7 @@ import commuse from './components/avatar.vue'
   <div class="cont">
     <startnav />
     <div class="selectcom">
-      <commuse />
+      <avatar />
     </div>
   </div>
 
