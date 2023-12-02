@@ -1,8 +1,7 @@
 # LunarCoreTools
-
-## 原项目
-[GrasscutterTools](https://wmn1525.github.io/grasscutterTools/dist/index.html#/start/holyrelic)
-
+web指令生成器，如果您有任何建议，请提交issue或pr
+## 在线访问
+[LunarcoreTools] (https://cmd.morax.top)
 ## 安装依赖
 `
 npm install
@@ -13,10 +12,21 @@ npm install
 npm run dev
 `
 
-## 打包build运行
+## 打包build运行(推荐)
 `
-npm run build:pro  
+npm run build:pro
 `
+`
+npm install http-server  
+`
+`
+cd dist  
+`
+`
+http-server
+`
+## 直接运行(可能更新不及时)
 
-## 直接运行
-
+`
+git clone https://github.com/moraxs/lctoolsweb.git
+`
