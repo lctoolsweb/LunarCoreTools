@@ -1,6 +1,6 @@
-# GrasscutterTools
+# LunarCoreTools
 
-## 在线访问
+## 原项目
 [GrasscutterTools](https://wmn1525.github.io/grasscutterTools/dist/index.html#/start/holyrelic)
 
 ## 安装依赖
