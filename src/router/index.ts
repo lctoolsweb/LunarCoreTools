@@ -68,6 +68,10 @@ let constantRoutes = [
         component: () => import('@/pages/start/components/food.vue'),
       },
       {
+        path: "/start/page1",
+        component: () => import('@/pages/start/components/page1.vue'),
+      },
+      {
         path: "/start/changepassword",
         component: () => import('@/pages/start/GCAuth/changepassword.vue'),
       }

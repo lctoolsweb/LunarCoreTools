@@ -19,7 +19,8 @@ const datav = reactive([
   { name: '光锥', path: "/start/weapon" },
   { name: '物品', path: "/start/thing" },
   { name: '角色', path: "/start/avatar" },
-  { name: '食物', path: "/start/food" },
+    { name: '食物', path: "/start/food" },
+    { name: '头像', path: "/start/page1" },
   // { name: '角色属性', path: "/start/role" },
 ])
 
