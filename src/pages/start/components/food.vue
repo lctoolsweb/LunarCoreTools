@@ -2,21 +2,22 @@
 <script setup lang="ts">
 import { reactive, ref, computed } from 'vue'
 import { useClipboard } from '@vueuse/core'
-import { Message } from '@arco-design/web-vue'
+import food from './json/food.json'
 import { useAppStore } from '@/store/modules/app'
-
-import avatar from './json/avatar.json'
+import { Message } from '@arco-design/web-vue'
 const { text, isSupported, copy } = useClipboard()
 const appStore = useAppStore()
 
-var value2 = ref(1001)
-var grade = ref(80)
-var num = ref(6)
+var value2 = ref(400008)
+var value3 = ref('/give')
+var num = ref(1)
 
 const value = computed(() => {
-  return `/give ${value2.value} lv${grade.value} r${num.value}`
+  return `${value3.value} ${value2.value} x${num.value}`
 })
-const options = reactive(avatar)
+const options = reactive(food)
+
+
 const message = Message
 
 function copyvalue() {
@@ -30,17 +31,14 @@ const send: any = inject("send")
 
 <template>
   <div class="commuse">
-  
+
     <div class="commuse-item">
-      <div class="text-slate-900 dark:text-slate-100"> 角色: </div>
-      <a-cascader allow-search v-model="value2" :options="options" placeholder="" filterable />
+      <div class="text-slate-900 dark:text-slate-100"> 物品: </div>
+      <a-select allow-search v-model="value2" :options="options" placeholder="请输入物品" filterable />
     </div>
+
     <div class="commuse-item">
-      <div class="text-slate-900 dark:text-slate-100"> 等级: </div>
-      <a-input-number v-model="grade" placeholder="请输入数量" mode="button" size="large" class="input-demo" />
-    </div>
-    <div class="commuse-item">
-      <div class="text-slate-900 dark:text-slate-100"> 星魂等级: </div>
+      <div class="text-slate-900 dark:text-slate-100"> 数量: </div>
       <a-input-number v-model="num" placeholder="请输入数量" mode="button" size="large" class="input-demo" />
     </div>
     <div class="generate">
