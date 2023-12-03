@@ -56,12 +56,36 @@ const options = reactive([
     value: '/gender male',
   },
   {
-    title: '切换女主',
+    title: '切换女主(重启生效)',
     value: '/gender female',
   },
   {
-    title: '均衡等级8',
-    value: '/worldlevel 8',
+    title: '均衡等级6',
+    value: '/worldlevel 6',
+  },
+  {
+    title: '开拓等级满级',
+    value: '/give 22 x99999',
+  },
+  {
+    title: '在世界中补充战技点',
+    value: '/refill',
+  },
+  {
+    title: '属性特别离谱的遗器',
+    value: '/give 63126 x1 lv999 s2 7:10000 8:10000 9:10000 5:10000',
+  },
+  {
+    title: '回满血',
+    value: '/heal',
+  },
+  {
+    title: '获得所有材料',
+    value: '/giveall materials',
+  },
+  {
+    title: '获得全部角色',
+    value: '/giveall avatars',
   },
 ])
 
