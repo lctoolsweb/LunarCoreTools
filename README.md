@@ -1,5 +1,4 @@
-# LunarCoreTools
-web指令生成器，如果您有任何建议，请提交issue或pr
+![LunarCoreTools](https://socialify.git.ci/moraxs/LunarCoreTools/image?description=1&font=Jost&forks=1&issues=1&language=1&name=1&owner=1&pattern=Floating%20Cogs&pulls=1&stargazers=1&theme=Light)
 ## 安装依赖
 `
 npm install
