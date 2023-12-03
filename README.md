@@ -28,5 +28,4 @@ http-server
 `
 git clone https://github.com/moraxs/lctoolsweb.git
 `
-## 🐧群
-[点击加入](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=3xtg3KSLEwAFzM9XgWBZTlOrOfTXvihG&authKey=syXEjNzTkMDmo9W542c3WnF7jAzloct2mPWACx3WapS7qK93j%2BK3jX7r4xLStnD4&noverify=0&group_code=124750952)
+
