@@ -59,7 +59,8 @@ const LoginHS = ref(true)
                   <li>
                     <a href="https://www.morax.top/" target="_bank"
                       class="block ml-6 text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">
-                      Blog
+                      
+
                     </a>
                   </li>
                   <li v-if="LoginHS">
