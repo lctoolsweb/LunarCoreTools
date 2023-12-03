@@ -90,8 +90,7 @@ onMounted(() => {
 <style lang="less" scoped>
 /* 添加样式以美化滚动公告 */
 .scrolling-notice {
-  background-color: #ff6464;
-  color: #333;
+  color: #BEBEBE;
   padding: 8px;
   font-size: 14px;
   text-align: center;
