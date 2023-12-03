@@ -1,7 +1,5 @@
 # LunarCoreTools
 web指令生成器，如果您有任何建议，请提交issue或pr
-## 在线访问
-[LunarcoreTools](https://cmd.morax.top)
 ## 安装依赖
 `
 npm install
