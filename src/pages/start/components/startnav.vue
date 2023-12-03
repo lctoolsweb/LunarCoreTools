@@ -15,7 +15,7 @@ const datav = reactive([
   { name: '常用', path: "/start/commuse" },
   //{ name: '遗器', path: "/start/holyrelic" },
   { name: '怪物生成', path: "/start/monster" },
-  { name: '自定义', path: "/start/other" },
+  { name: '预设快捷指令', path: "/start/other" },
   { name: '光锥', path: "/start/weapon" },
   { name: '物品', path: "/start/thing" },
   { name: '角色', path: "/start/avatar" },
