@@ -87,6 +87,10 @@ const options = reactive([
     title: '获得全部角色',
     value: '/giveall avatars',
   },
+  {
+    title: '将配队改为四个托帕',
+    value: '/lineup 1112 1112 1112 1112',
+  },
 ])
 
 const message = Message
