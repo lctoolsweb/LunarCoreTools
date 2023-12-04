@@ -10,19 +10,16 @@
       
 
       <div class="commuse-item">
-        <div class="text-slate-900 dark:text-slate-100"> 怪物: </div>
+        <div class="text-slate-900 dark:text-slate-100"> 局外显示怪物: </div>
         <a-cascader allow-search v-model="value2" :options="options" placeholder="" filterable />
       </div>
 
       <div class="commuse-item">
-        <div class="text-slate-900 dark:text-slate-100"> 等级: </div>
-        <a-input-number v-model="grade" placeholder="请输入数量" mode="button" size="large" class="input-demo" />
+        <div class="text-slate-900 dark:text-slate-100"> 局内战斗怪物: </div>
+        <a-cascader allow-search v-model="value3" :options="options" placeholder="" filterable />
       </div>
 
-      <div class="commuse-item">
-        <div class="text-slate-900 dark:text-slate-100"> 数量: </div>
-        <a-input-number v-model="num" placeholder="请输入数量" mode="button" size="large" class="input-demo" />
-      </div>
+      
 
       <div class="generate">
         <a-input v-model="value" placeholder="" />
@@ -44,11 +41,11 @@ const { text, isSupported, copy } = useClipboard()
 const appStore = useAppStore()
 
 var value2 = ref(1004010)
-var grade = ref(80)
-var num = ref(1)
+var value3 = ref(1004010)
+
 
 const value = computed(() => {
-  return `/spawn ${value2.value} ${num.value} ${grade.value}`
+  return `/spawn ${value2.value} ${value3.value}`
 })
 
 const options = reactive(monster)

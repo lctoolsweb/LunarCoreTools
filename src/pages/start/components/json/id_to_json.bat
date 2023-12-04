@@ -21,4 +21,4 @@ for /f "tokens=1,* delims=:" %%a in (%inputFile%) do (
 
 echo ] >> %outputFile%
 
-echo 转换完成，结果保存在 %outputFile%
+echo 
