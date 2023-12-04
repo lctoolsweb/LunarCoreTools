@@ -10,7 +10,7 @@ import {
 import router from "@/router/index"
 import { useAppStore } from '@/store'
 import { throwStatement } from '@babel/types';
-const appStore = useAppStore()
+const appStore = useAppStore()  
 const datav = reactive([
   { name: '常用', path: "/start/commuse" },
   //{ name: '遗器', path: "/start/holyrelic" },
@@ -21,6 +21,7 @@ const datav = reactive([
   { name: '角色', path: "/start/avatar" },
     { name: '食物', path: "/start/food" },
     { name: '头像', path: "/start/page1" },
+    { name: '场景', path: "/start/scene" },
   // { name: '角色属性', path: "/start/role" },
 ])
 
