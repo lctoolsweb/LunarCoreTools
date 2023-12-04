@@ -65,7 +65,7 @@ const options = reactive([
   },
   {
     title: '开拓等级满级',
-    value: '/give 22 x99999',
+    value: '/give 22 x999999',
   },
   {
     title: '在世界中补充战技点',
