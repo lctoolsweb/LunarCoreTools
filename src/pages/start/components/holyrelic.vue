@@ -10,7 +10,6 @@ import { useAppStore } from '@/store/modules/app'
 const { text, isSupported, copy } = useClipboard()
 const appStore = useAppStore()
 
-var uid = ref('@')
 var holyrelicnamevalue = ref('')
 var holyrelicnmainvalue = ref('')
 
@@ -22,10 +21,10 @@ const value = computed(() => {
   var xct = ''
   options3.value.forEach((k) => {
     if (k.isCheck) {
-      xct = xct + ` ${k.value},${k.num}`
+      xct = xct + ` ${k.value}:${k.num}`
     }
   })
-  return `/give ${uid.value} ${holyrelicnamevalue.value} lv${grade.value} ${holyrelicnmainvalue.value}${xct} `
+  return `/give ${holyrelicnamevalue.value} lv${grade.value} s${holyrelicnmainvalue.value}${xct} `
 })
 const options = reactive(holyrelicname)
 
@@ -55,10 +54,6 @@ const send: any = inject("send")
 
 <template>
   <div class="commuse">
-    <div class="commuse-item">
-      <div class="text-slate-900 dark:text-slate-100"> UID: </div>
-      <a-input v-model="uid" placeholder="UID暂不可用" allow-clear />
-    </div>
 
     <div class="commuse-item">
       <div class="text-slate-900 dark:text-slate-100"> 遗器: </div>
