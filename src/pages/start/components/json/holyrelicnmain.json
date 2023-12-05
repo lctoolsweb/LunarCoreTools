@@ -1,114 +1,154 @@
 [
-    {
+  {
+    "value": 1,
+    "label": "头部",
+    "children": [
+      {
         "label": "头-固定生命",
-        "value": 1
-    },
-    {
+        "value": "a1"
+      }
+    ]
+  },
+  {
+    "value": 2,
+    "label": "手部",
+    "children": [
+      {
         "label": "手-固定攻击",
-        "value": 1
-    },
-    {
+        "value": "b1"
+      },
+      {
+        "label": "手-固定攻击1",
+        "value": "b2"
+      }
+    ]
+  },
+  {
+    "value": 3,
+    "label": "身体",
+    "children": [
+      {
         "label": "身体-百分比生命",
-        "value": 1
-    },
-    {
+        "value": "c1"
+      },
+      {
         "label": "身体-固定攻击",
-        "value": 2
-    },
-    {
+        "value": "c2"
+      },
+      {
         "label": "身体-百分比防御",
-        "value": 3
-    },
-    {
+        "value": "c3"
+      },
+      {
         "label": "身体-暴击率",
-        "value": 4
-    },
-    {
+        "value": "c4"
+      },
+      {
         "label": "身体-爆伤",
-        "value": 5
-    },
-    {
+        "value": "c5"
+      },
+      {
         "label": "身体-治疗量",
-        "value": 6
-    },
-    {
+        "value": "c6"
+      },
+      {
         "label": "身体-效果命中",
-        "value": 7
-    },
-    {
+        "value": "c7"
+      }
+    ]
+  },
+  {
+    "value": 4,
+    "label": "脚",
+    "children": [
+      {
         "label": "脚-百分比生命",
-        "value": 1
-    },
-    {
+        "value": "d1"
+      },
+      {
         "label": "脚-固定攻击",
-        "value": 2
-    },
-    {
+        "value": "d2"
+      },
+      {
         "label": "脚-百分比防御",
-        "value": 3
-    },
-    {
+        "value": "d3"
+      },
+      {
         "label": "脚-速度",
-        "value": 4
-    },
-    {
+        "value": "d4"
+      }
+    ]
+  },
+  {
+    "value": 5,
+    "label": "球",
+    "children": [
+      {
         "label": "球-百分比生命",
-        "value": 1
-    },
-    {
+        "value": "e1"
+      },
+      {
         "label": "球-固定攻击",
-        "value": 2
-    },
-    {
+        "value": "e2"
+      },
+      {
         "label": "球-百分比防御",
-        "value": 3
-    },
-    {
+        "value": "e3"
+      },
+      {
         "label": "球-物理伤害",
-        "value": 4
-    },
-    {
+        "value": "e4"
+      },
+      {
         "label": "球-火伤",
-        "value": 5
-    },
-    {
+        "value": "e5"
+      },
+      {
         "label": "球-冰伤",
-        "value": 6
-    },
-    {
+        "value": "e6"
+      },
+      {
         "label": "球-雷伤",
-        "value": 7
-    },
-    {
+        "value": "e7"
+      },
+      {
         "label": "球-风伤",
-        "value": 8
-    },
-    {
+        "value": "e8"
+      },
+      {
         "label": "球-量子伤害",
-        "value": 9
-    },
-    {
+        "value": "e9"
+      },
+      {
         "label": "球-虚数伤害",
-        "value": 10
-    },
-    {
+        "value": "e10"
+      }
+    ]
+  },
+  {
+    "value": 6,
+    "label": "连接绳",
+    "children": [
+      {
         "label": "项链-击破特攻",
-        "value": 1
-    },
-    {
+        "value": "f1"
+      },
+      {
         "label": "项链-充能",
-        "value": 2
-    },
-    {
+        "value": "f2"
+      },
+      {
         "label": "项链-百分比生命",
-        "value": 3
-    },
-    {
+        "value": "f3"
+      },
+      {
         "label": "项链-固定攻击",
-        "value": 4
-    },
-    {
+        "value": "f4"
+      },
+      {
         "label": "项链-百分比防御",
-        "value": 5
-    }
+        "value": "f5"
+      }
+    ]
+  }
 ]

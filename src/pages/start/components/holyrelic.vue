@@ -24,7 +24,11 @@ const value = computed(() => {
       xct = xct + ` ${k.value}:${k.num}`
     }
   })
-  return `/give ${holyrelicnamevalue.value} lv${grade.value} s${holyrelicnmainvalue.value}${xct} `
+
+  // 删除第一个标识字符 a=头部 b=手 c=身体 d=脚 e=球 f=项链
+  const modifiedValue = holyrelicnmainvalue.value.slice(1);
+
+  return `/give ${holyrelicnamevalue.value} lv${grade.value} s${modifiedValue}${xct} `
 })
 const options = reactive(holyrelicname)
 
