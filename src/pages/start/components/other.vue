@@ -32,12 +32,28 @@ const appStore = useAppStore()
 
 const options = reactive([
   {
-    title: '站场角色满级',
-    value: '/avatar lv80 s10',
+    title: '获得全部角色',
+    value: '/giveall avatars',
   },
   {
     title: '获得所有武器',
     value: '/giveall lightcones lv80 r5',
+  },
+  {
+    title: '获得所有材料',
+    value: '/giveall materials',
+  },
+  {
+    title: '站场角色满级',
+    value: '/avatar lv80 s10',
+  },
+  {
+    title: '均衡等级6',
+    value: '/worldlevel 6',
+  },
+  {
+    title: '开拓等级满级',
+    value: '/give 22 x999999',
   },
   {
     title: '1000星轨通票',
@@ -52,20 +68,8 @@ const options = reactive([
     value: '/clear all',
   },
   {
-    title: '切换男主(重启生效)',
-    value: '/gender male',
-  },
-  {
-    title: '切换女主(重启生效)',
-    value: '/gender female',
-  },
-  {
-    title: '均衡等级6',
-    value: '/worldlevel 6',
-  },
-  {
-    title: '开拓等级满级',
-    value: '/give 22 x999999',
+    title: '回满血',
+    value: '/heal',
   },
   {
     title: '在世界中补充战技点',
@@ -76,20 +80,16 @@ const options = reactive([
     value: '/give 63126 x1 lv999 s2 7:10000 8:10000 9:10000 5:10000',
   },
   {
-    title: '回满血',
-    value: '/heal',
-  },
-  {
-    title: '获得所有材料',
-    value: '/giveall materials',
-  },
-  {
-    title: '获得全部角色',
-    value: '/giveall avatars',
-  },
-  {
     title: '将配队改为四个托帕',
     value: '/lineup 1112 1112 1112 1112',
+  },
+  {
+    title: '切换男主(重启生效)',
+    value: '/gender male',
+  },
+  {
+    title: '切换女主(重启生效)',
+    value: '/gender female',
   },
 ])
 
@@ -124,20 +124,20 @@ onMounted(() => {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  border-radius: 10px; /* 添加圆角样式 */
+  border-radius: 10px;/* 添加圆角样式 */
 }
 
 .commuse {
   width: 500px;
   margin: auto;
 
-  > div {
+  >div {
     margin: 10px 0;
     display: flex;
     align-items: center;
     color: #000;
 
-    > div {
+    >div {
       &:nth-child(1) {
         width: 130px;
       }
