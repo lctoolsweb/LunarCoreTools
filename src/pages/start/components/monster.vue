@@ -16,7 +16,7 @@
 
       <div class="commuse-item">
         <div class="text-slate-900 dark:text-slate-100"> 局内战斗怪物: </div>
-        <a-cascader allow-search v-model="value3" :options="options" placeholder="" filterable />
+        <a-cascader allow-search v-model="value3" :options="options2" placeholder="" filterable />
       </div>
 
       
@@ -35,6 +35,7 @@ import { reactive, ref, computed, inject, onMounted } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import { Message } from '@arco-design/web-vue'
 import monster from './json/monster.json'
+import stage from './json/stage.json'
 import { useAppStore } from '@/store/modules/app'
 
 const { text, isSupported, copy } = useClipboard()
@@ -49,6 +50,7 @@ const value = computed(() => {
 })
 
 const options = reactive(monster)
+const options2 = reactive(stage)
 
 const message = Message
 
