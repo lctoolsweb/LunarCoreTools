@@ -75,7 +75,7 @@ const value = computed(() => {
     }
   })
 
-  // 删除第一个标识字符 a=头部 b=手 c=身体 d=脚 e=球 f=项链
+  // 删除第一个标识字符 a=头部 b=手部 c=躯干 d=脚部 e=位面球 f=连接绳
   const modifiedValue = holyrelicnmainvalue.value.slice(1);
 
   return `/give ${holyrelicnamevalue.value} lv${grade.value} s${modifiedValue}${xct} `
