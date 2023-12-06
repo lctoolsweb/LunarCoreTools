@@ -18,7 +18,18 @@
         <div class="text-slate-900 dark:text-slate-100"> 局内战斗怪物: </div>
         <a-cascader allow-search v-model="value3" :options="options2" placeholder="" filterable />
       </div>
-
+      <div class="commuse-item">
+        <div class="text-slate-900 dark:text-slate-100"> 数量: </div>
+        <a-input-number v-model="amount" placeholder="" mode="button" size="large" class="input-demo" />
+      </div>
+      <div class="commuse-item">
+        <div class="text-slate-900 dark:text-slate-100"> 等级: </div>
+        <a-input-number v-model="level" placeholder="" mode="button" size="large" class="input-demo" />
+      </div>
+      <div class="commuse-item">
+        <div class="text-slate-900 dark:text-slate-100"> 半径: </div>
+        <a-input-number v-model="radius" placeholder="" mode="button" size="large" class="input-demo" />
+      </div>
       
 
       <div class="generate">
@@ -42,15 +53,18 @@ const { text, isSupported, copy } = useClipboard()
 const appStore = useAppStore()
 
 var value2 = ref(1004010)
-var value3 = ref(1004010)
+var value3 = ref(1)
 
 
 const value = computed(() => {
-  return `/spawn ${value2.value} ${value3.value}`
+  return `/spawn ${value2.value} ${value3.value} x${amount.value} lv${level.value} r${radius.value}`
 })
 
 const options = reactive(monster)
 const options2 = reactive(stage)
+const amount = ref(1)
+const level = ref(1)
+const radius = ref(1)
 
 const message = Message
 
