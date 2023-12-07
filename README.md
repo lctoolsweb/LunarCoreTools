@@ -1,4 +1,4 @@
-![LunarCoreTools](https://socialify.git.ci/moraxs/LunarCoreTools/image?description=1&descriptionEditable=%E6%9C%9F%E6%9C%ABvite%E4%BD%9C%E4%B8%9A%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light)
+![LunarCoreTools](https://socialify.git.ci/lctoolsweb/LunarCoreTools/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fimg.morax.top%2Ffile%2F2578855f05450d5878252.png&name=1&pulls=1&stargazers=1&theme=Light)
 ## 免责声明
 本项目完全遵守相关的开源协议，您可以根据自己的意愿自由地更改源码  
 因用于商业用途而导致的任何法律后果，包括但不限于损失、责任、索赔或其他相关事宜，本项目的开发者概不负责。  
