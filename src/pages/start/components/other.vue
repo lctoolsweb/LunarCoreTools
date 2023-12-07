@@ -124,20 +124,21 @@ onMounted(() => {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  border-radius: 10px;/* 添加圆角样式 */
+  border-radius: 10px;
+  /* 添加圆角样式 */
 }
 
 .commuse {
   width: 500px;
   margin: auto;
 
-  >div {
+  > div {
     margin: 10px 0;
     display: flex;
     align-items: center;
     color: #000;
 
-    >div {
+    > div {
       &:nth-child(1) {
         width: 130px;
       }

@@ -13,7 +13,8 @@ import { throwStatement } from '@babel/types';
 const appStore = useAppStore()  
 const datav = reactive([
   { name: '常用', path: "/start/commuse" },
-  { name: '遗器', path: "/start/holyrelic" },
+  { name: '自定义遗器', path: "/start/holyrelic" },
+  { name: '毕业遗器', path: "/start/holyrelic2" },
   { name: '怪物生成', path: "/start/monster" },
   { name: '预设快捷指令', path: "/start/other" },
   { name: '光锥', path: "/start/weapon" },

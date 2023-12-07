@@ -28,6 +28,10 @@ let constantRoutes = [
         component: () => import('@/pages/start/components/holyrelic.vue'),
       },
       {
+        path: "/start/holyrelic2",
+        component: () => import('@/pages/start/components/holyrelic2.vue'),
+      },
+      {
         path: "/start/monster",
         component: () => import('@/pages/start/components/monster.vue'),
       },
