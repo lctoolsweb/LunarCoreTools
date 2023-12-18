@@ -35,4 +35,5 @@ git clone https://github.com/moraxs/lctoolsweb.git
 `
 # exe版
 [仓库地址](https://github.com/lctoolsweb/LunarCoreToolsLocal)
-
+# 闲聊银帕
+[Q群](https://qm.qq.com/q/dpjyik6QWk)
