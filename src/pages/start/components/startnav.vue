@@ -23,6 +23,7 @@ const datav = reactive([
     { name: '食物', path: "/start/food" },
     { name: '头像', path: "/start/page1" },
     { name: '场景', path: "/start/scene" },
+    { name: '远程', path: "/start/about" },
   // { name: '角色属性', path: "/start/role" },
 ])
 
@@ -32,11 +33,11 @@ const datav = reactive([
   //{ name: '在线人员', path: "/start/personnel" },
 //])
 
-const datav3 = reactive([
-  { name: '登录获取Tocken', path: "/start/login" },
-  { name: '注册', path: "/start/register" },
-  { name: '修改密码', path: "/start/changepassword" },
-])
+//const datav3 = reactive([
+  //{ name: '登录获取Tocken', path: "/start/login" },
+  //{ name: '注册', path: "/start/register" },
+  //{ name: '修改密码', path: "/start/changepassword" },
+//])
 
 const GMTitle = ref("GM控制面板-暂不可用")
 
@@ -50,20 +51,20 @@ onMounted(() => {
   selectedKey.value = [router.currentRoute.value.fullPath]
 })
 
-watch(
-  () => appStore.isLogin,
-  () => {
-    const isLogin: boolean = appStore.isLogin
-    if (isLogin) {
-      GMTitle.value = "GM控制面板-已登录"
-    } else {
-      GMTitle.value = "GM控制面板-暂不可用"
-    }
-  },
-  {
-    immediate: true,
-  },
-)
+//watch(
+  //() => appStore.isLogin,
+ // () => {
+    //const isLogin: boolean = appStore.isLogin
+    //if (isLogin) {
+   //   GMTitle.value = "GM控制面板-已登录"
+   // } else {
+    //  GMTitle.value = "GM控制面板-暂不可用"
+  //  }
+ // },
+  //{
+   // immediate: true,
+ // },
+//)
 
 watch(
   () => router.currentRoute.value.path,
