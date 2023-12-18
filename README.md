@@ -4,7 +4,7 @@
 因用于商业用途而导致的任何法律后果，包括但不限于损失、责任、索赔或其他相关事宜，本项目的开发者概不负责。  
 使用者需自行承担使用本项目的风险，并在遵循 MIT 许可证的前提下自行评估和处理相关的法律责任。  
 **因不符合规定的商业行为，我们已经暂停示例页面的访问，使用者需自行搭建并承担可能带来的相关法律责任。**
-
+# web版
 ## 安装依赖
 `
 npm install
@@ -33,4 +33,7 @@ http-server
 `
 git clone https://github.com/moraxs/lctoolsweb.git
 `
-
+# exe版
+[仓库地址](https://github.com/lctoolsweb/LunarCoreToolsLocal)
+# 闲聊银帕
+[Q群](https://qm.qq.com/q/dpjyik6QWk)
