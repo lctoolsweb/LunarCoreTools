@@ -42,11 +42,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       cors: false,
       host: '0.0.0.0',
       proxy,
-      force: true,
-      https: {
-        cert: fs.readFileSync(path.join(__dirname, 'src/ssl/cert.crt')),
-        key: fs.readFileSync(path.join(__dirname, 'src/ssl/cert.key'))
-      }
+      force: true
     },
     build: {
       target: 'es2015',
