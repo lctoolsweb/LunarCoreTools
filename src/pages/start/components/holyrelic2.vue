@@ -36,7 +36,11 @@ var value2 = ref('先选择角色再选择遗器部位')
 var value3 = ref('/give')
 
 const value = computed(() => {
-  return `${value3.value} ${value2.value}`
+  
+  // 删除6位标识字符 括号内的标识字符均为角色代码 如果以后一个角色有更多的套装搭配 可以更改括号类型
+  const sixsixsix = value2.value.slice(6);
+
+  return `${value3.value} ${sixsixsix}`
 })
 
 const options = reactive(page1)
