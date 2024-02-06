@@ -1,8 +1,4 @@
 ![LunarCoreTools](https://socialify.git.ci/lctoolsweb/LunarCoreTools/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fimg.morax.top%2Ffile%2F2578855f05450d5878252.png&name=1&pulls=1&stargazers=1&theme=Light)
-## 声明
-因不符合规定的商业行为，我们已经永久停止本仓库的更新，中国商人，这盛世如你所愿😊🙃😊😊😅
-
-
 ## 免责声明
 本项目完全遵守相关的开源协议，您可以根据自己的意愿自由地更改源码  
 因用于商业用途而导致的任何法律后果，包括但不限于损失、责任、索赔或其他相关事宜，本项目的开发者概不负责。  
@@ -14,12 +10,10 @@
 npm install
 `
 
-## 开发
+## 开发(在dev模式下响应较慢)
 `
 npm run dev
 `
-## 注意事项
-因远期支持[gc-opencommand-plugin](https://github.com/jie65535/gc-opencommand-plugin/tree/LunarCode)解决CORS跨域问题，dev模式启用了https,请先使用[mkcert](https://www.npmjs.com/package/mkcert)自签证书。(非必须)
 
 ## 打包build运行(推荐)
 `
@@ -34,11 +28,9 @@ cd dist
 `
 http-server
 `
-## 直接运行(可能更新不及时)
-
-`
-git clone https://github.com/moraxs/lctoolsweb.git
-`
-# exe版
+# exe版(可能更新不及时)
 [仓库地址](https://github.com/lctoolsweb/LunarCoreToolsLocal)
 
+## 更新日志
+
+2024/02/06-移动端初步适配，version:0.0.1→0.1.2
