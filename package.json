@@ -1,6 +1,6 @@
 {
   "name": "lunarcore-tools",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "moraxs",
   "scripts": {
     "dev": "vite --mode development",
