@@ -5,33 +5,11 @@
         <template #icon>
           <IconApps></IconApps>
         </template>
-        <template #title>控制台代码生成 </template>
+        <template #title>{{ t('menu.main') }}</template>
         <a-menu-item v-for="(item, index) in datav" :key="item.path" @click="topath(item.path)">
-          {{ item.name }}
+          {{ t(`menu.${item.name.toLowerCase()}`) }}
         </a-menu-item>
       </a-sub-menu>
-      <!-- Commented out datav2 section
-      <a-sub-menu key="1">
-        <template #icon>
-          <IconBug></IconBug>
-        </template>
-        <template #title>{{ GMTitle }}</template>
-        <a-menu-item v-for="(item, index) in datav2" :key="item.path" @click="topath(item.path)">
-          {{ item.name }}
-        </a-menu-item>
-      </a-sub-menu>
-      -->
-      <!-- Commented out datav3 section
-      <a-sub-menu key="2">
-        <template #icon>
-          <IconApps></IconApps>
-        </template>
-        <template #title>GCAuth-暂未实现功能</template>
-        <a-menu-item v-for="(item, index) in datav3" :key="item.path" @click="topath(item.path)">
-          {{ item.name }}
-        </a-menu-item>
-      </a-sub-menu>
-      -->
     </a-menu>
   </div>
 </template>
@@ -41,43 +19,25 @@ import { reactive, ref, onMounted, watch } from 'vue'
 import { IconApps, IconBug } from '@arco-design/web-vue/es/icon';
 import router from "@/router/index"
 import { useAppStore } from '@/store'
+import { useI18n } from 'vue-i18n'
 
 const appStore = useAppStore()  
+const { t, locale } = useI18n()
 
 const datav = reactive([
-  { name: '常用', path: "/start/commuse" },
-  { name: '自定义遗器', path: "/start/holyrelic" },
-  { name: '毕业遗器', path: "/start/holyrelic2" },
-  { name: '怪物生成', path: "/start/monster" },
-  { name: '预设快捷指令', path: "/start/other" },
-  { name: '光锥', path: "/start/weapon" },
-  { name: '物品', path: "/start/thing" },
-  { name: '角色', path: "/start/avatar" },
-  { name: '食物', path: "/start/food" },
-  { name: '头像', path: "/start/page1" },
-  { name: '场景', path: "/start/scene" },
-  { name: '远程', path: "/start/about" },
+  { name: 'frequently', path: "/start/commuse" },
+  { name: 'Customrelics', path: "/start/holyrelic" },
+  { name: 'Graduationrelics', path: "/start/holyrelic2" },
+  { name: 'Monsterspawning', path: "/start/monster" },
+  { name: 'Presetshortcuts', path: "/start/other" },
+  { name: 'LightCones', path: "/start/weapon" },
+  { name: 'item', path: "/start/thing" },
+  { name: 'character', path: "/start/avatar" },
+  { name: 'food', path: "/start/food" },
+  { name: 'avatar', path: "/start/page1" },
+  { name: 'scene', path: "/start/scene" },
+  { name: 'RemoteControl', path: "/start/about" }, // Modified key to match your translation
 ])
-
-// Commented out datav2 and GMTitle
-/*
-const datav2 = reactive([
-  { name: 'WSS连接', path: "/start/wss" },
-  { name: '控制台', path: "/start/consoled" },
-  { name: '在线人员', path: "/start/personnel" },
-])
-
-const GMTitle = ref("GM控制面板-暂不可用")
-*/
-
-// Commented out datav3
-/*
-const datav3 = reactive([
-  { name: '登录获取Tocken', path: "/start/login" },
-  { name: '注册', path: "/start/register" },
-  { name: '修改密码', path: "/start/changepassword" },
-])
-*/
 
 function topath(path: string) {
   router.push({ path: path })
@@ -107,6 +67,11 @@ watch(
   },
   { immediate: true }
 )
+
+// Set initial language based on browser language
+onMounted(() => {
+  locale.value = navigator.language.includes('zh') ? 'zh' : 'en'
+})
 </script>
 
 <style lang="less" scoped>
@@ -122,3 +87,4 @@ watch(
   }
 }
 </style>
+

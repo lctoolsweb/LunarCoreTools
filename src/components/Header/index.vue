@@ -1,11 +1,9 @@
-
-
-
 <script setup lang="ts">
 import SvgIcon from '../SvgIcon/index.vue'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useDark, useToggle } from '@vueuse/core';
 import { useAppStore, useUserStore } from '@/store';
+
 import { IconMoonFill, IconSunFill } from '@arco-design/web-vue/es/icon';
 import { IconClockCircle } from '@arco-design/web-vue/es/icon';
 const title = ref('I want to study typescript')
@@ -41,6 +39,8 @@ const ThemeChange = (val: string | number | boolean) => {
 }
 
 const LoginHS = ref(true)
+
+
 
 </script>
 

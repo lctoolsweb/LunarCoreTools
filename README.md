@@ -5,6 +5,9 @@
 使用者需自行承担使用本项目的风险，并在遵循 MIT 许可证的前提下自行评估和处理相关的法律责任。  
 **因不符合规定的商业行为，我们已经暂停示例页面的访问，使用者需自行搭建并承担可能带来的相关法律责任。**
 # web版
+## 多语言
+页面会根据当前浏览器语言自动调整语言，目前仅支持中文，英文，且部分(bushi)翻译工作尚未完成，若您想为项目的国际化做出贡献，请提交pr。
+The page will automatically adjust the language according to the current browser language, currently only supports Chinese, English, and some translation work has not yet been completed, if you want to contribute to the internationalization of the project, please submit a PR.
 ## 安装依赖
 `
 npm install

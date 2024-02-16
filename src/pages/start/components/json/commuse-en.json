@@ -1,0 +1,167 @@
+[
+    {
+        "label": "stellar jade",
+        "value": 1
+    },
+    {
+        "label": "credits",
+        "value": 2
+    },
+    {
+        "label": "Oneiric Shard",
+        "value": 3
+    },
+    {
+        "label": "Trailblaze Power",
+        "value": 11
+    },
+    {
+        "label": "Reserved Trailblaze Power",
+        "value": 12
+    },
+    {
+        "label": "Exp",
+        "value": 21
+    },
+    {
+        "label": "Trailblaze EXP",
+        "value": 22
+    },
+    {
+        "label": "unknown",
+        "value": 23
+    },
+    {
+        "label": "Trailblaze Timer",
+        "value": 24
+    },
+    {
+        "label": "The Returning Trail",
+        "value": 25
+    },
+    {
+        "label": "Cosmic Fragment",
+        "value": 31
+    },
+    {
+        "label": "Ability Point",
+        "value": 32
+    },
+    {
+        "label": "Immersifier",
+        "value": 33
+    },
+    {
+        "label": "Achievement Points",
+        "value": 41
+    },
+    {
+        "label": "The Nameless EXP",
+        "value": 51
+    },
+    {
+        "label": "The Nameless EXP",
+        "value": 52
+    },
+    {
+        "label": "Development Fund",
+        "value": 53
+    },
+    {
+        "label": "tar rail pass",
+        "value": 101
+    },
+    {
+        "label": "star rail special pass",
+        "value": 102
+    },
+
+    {
+        "label": "Fuel",
+        "value": 201
+    },
+    {
+        "label": "Travel Encounters",
+        "value": 211
+    },
+    {
+        "label": "Adventure Log",
+        "value": 212
+    },
+    {
+        "label": "Traveler's Guide",
+        "value": 213
+    },
+    {
+        "label": "稀薄以太",
+        "value": 221
+    },
+    {
+        "label": "凝缩以太",
+        "value": 222
+    },
+    {
+        "label": "提纯以太",
+        "value": 223
+    },
+    {
+        "label": "遗失光尘",
+        "value": 231
+    },
+    {
+        "label": "遗失碎金",
+        "value": 232
+    },
+    {
+        "label": "遗失晶块",
+        "value": 233
+    },
+    {
+        "label": "遗失精粹",
+        "value": 234
+    },
+    {
+        "label": "遗器残骸",
+        "value": 235
+    },
+    {
+        "label": "自塑尘脂",
+        "value": 236
+    },
+    {
+        "label": "命运的足迹",
+        "value": 241
+    },
+    {
+        "label": "未熄的余烬",
+        "value": 251
+    },
+    {
+        "label": "未熄的星芒",
+        "value": 252
+    },
+    {
+        "label": "流光余晖",
+        "value": 261
+    },
+    {
+        "label": "叠影器（特制）",
+        "value": 271
+    },
+    {
+        "label": "黑塔债券",
+        "value": 503
+    },
+    {
+        "label": "启行的祝福",
+        "value": 800
+    },
+    {
+        "label": "启行的祝福",
+        "value": 801
+    },
+    {
+        "label": "dev_通用测试道具",
+        "value": 999
+    }
+    ]

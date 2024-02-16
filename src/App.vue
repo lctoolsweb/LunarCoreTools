@@ -10,26 +10,7 @@ import { darkTheme } from 'naive-ui'
 const appStore = useAppStore()
 const apptheme = ref()
 
-// provide('reload', reload)
-// function reload() {
-//   isRouterAlive.value = false
-//   nextTick(() => (isRouterAlive.value = true))
-// }
 
-// const isRouterAlive = ref(true)
-
-// watch(
-//   () => appStore.title,
-//   () => {
-//     const title: string = appStore.title
-//     document.title = title
-//       ? `${title} - ${import.meta.env.VITE_APP_TITLE}`
-//       : import.meta.env.VITE_APP_TITLE
-//   },
-//   {
-//     immediate: true,
-//   }
-// )
 
 watch(
   () => appStore.theme,
