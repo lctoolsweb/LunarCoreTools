@@ -1,3 +1,5 @@
+中文 | [English](README_en-US.md)
+
 ![LunarCoreTools](https://socialify.git.ci/lctoolsweb/LunarCoreTools/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fimg.morax.top%2Ffile%2F2578855f05450d5878252.png&name=1&pulls=1&stargazers=1&theme=Light)
 ## 免责声明
 本项目完全遵守相关的开源协议，您可以根据自己的意愿自由地更改源码  
@@ -37,3 +39,4 @@ http-server
 ## 更新日志
 
 2024/02/06-移动端初步适配，version:0.0.1→0.1.2
+2024/02/16-多语言支持
