@@ -8,18 +8,18 @@
     <!-- 原有的组件内容 -->
     <div class="commuse">
       <div class="commuse-item">
-        <div class="text-slate-900 dark:text-slate-100"> 遗器: </div>
-        <a-cascader allow-search v-model="holyrelicnamevalue" :options="options" placeholder="请输入物品" filterable />
+        <div class="text-slate-900 dark:text-slate-100">{{ t('relic.relic') }}:</div>
+        <a-cascader allow-search v-model="holyrelicnamevalue" :options="options" placeholder="" filterable />
       </div>
 
       <div class="commuse-item">
-        <div class="text-slate-900 dark:text-slate-100"> 主属性: </div>
-        <a-cascader allow-search v-model="holyrelicnmainvalue" :options="options2" placeholder="请输入主属性" filterable />
+        <div class="text-slate-900 dark:text-slate-100">{{ t('relic.basestats') }}:</div>
+        <a-cascader allow-search v-model="holyrelicnmainvalue" :options="options2" placeholder="" filterable />
         <!-- <n-select v-model:value="holyrelicnmainvalue" filterable placeholder="选择遗器主属性" :options="options2" /> -->
       </div>
 
       <div class="commuse-item">
-        <div class="text-slate-900 dark:text-slate-100"> 属性小词条: </div>
+        <div class="text-slate-900 dark:text-slate-100">{{ t('relic.advancedstats') }}:</div>
 
         <div class="smallho">
           <div class="smallho-item" v-for="(item, index) in options3" :key="index">
@@ -33,14 +33,14 @@
       </div>
 
       <div class="commuse-item">
-        <div class="text-slate-900 dark:text-slate-100"> 强化等级: </div>
+        <div class="text-slate-900 dark:text-slate-100">{{ t('relic.enhancementlevel') }}</div>
 
         <a-input-number placeholder="" v-model="grade" :min="0" :max="20" />
       </div>
 
       <div class="generate">
         <a-input v-model="value" placeholder="" />
-        <a-button type="outline" @click="copyvalue">复制</a-button>
+        <a-button type="outline" @click="copyvalue">{{ t('main.copy') }}</a-button>
         <a-button type="outline" v-if="appStore.isLogin" @click="send(value)">执行</a-button>
       </div>
     </div>
@@ -57,6 +57,8 @@ import holyrelicnmain from './json/holyrelicnmain.json'
 import holyrelicx from './json/holyrelicnx.json'
 import { Message } from '@arco-design/web-vue'
 import { useAppStore } from '@/store/modules/app'
+import { useI18n } from 'vue-i18n'
+const { t, locale } = useI18n()
 const { text, isSupported, copy } = useClipboard()
 const appStore = useAppStore()
 

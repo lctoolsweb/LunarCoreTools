@@ -44,6 +44,13 @@ const options: I18nOptions = {
       commuse: {
         item: "物品",
         number: "数量",
+      },
+      relic:{
+        relic:"遗器",
+        basestats:"基础属性",
+        advancedstats:"进阶属性",
+        enhancementlevel:"强化等级",
+
       }
     },
     en: {
@@ -81,6 +88,13 @@ const options: I18nOptions = {
       commuse: {
         item: "item",
         number: "number",
+      },
+      relic:{
+        relic:"relic",
+        basestats:"Base Stats",
+        advancedstats:"Advanced Stats",
+        enhancementlevel:"Enhancement level",
+
       }
 
     },

@@ -10,6 +10,9 @@
 ## 多语言
 页面会根据当前浏览器语言自动调整语言，目前仅支持中文，英文，且部分(bushi)翻译工作尚未完成，若您想为项目的国际化做出贡献，请提交pr。
 The page will automatically adjust the language according to the current browser language, currently only supports Chinese, English, and some translation work has not yet been completed, if you want to contribute to the internationalization of the project, please submit a PR.
+
+## 运行环境
+*node 18*，其他版本不保证能稳定运行.下方所有命令请在Windows终端中运行
 ## 安装依赖
 `
 npm install
