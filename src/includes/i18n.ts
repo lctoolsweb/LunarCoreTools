@@ -14,7 +14,9 @@ const options: I18nOptions = {
         success: "已复制",
         text1: "请输入物品",
         text2: "请输入数量",
-        execute: "执行"
+        execute: "执行",
+        tips: "如果指令未刷新，请重新勾选属性词条",
+        version:"工具版本v0.1.2 游戏版本2.0.0"
       },
       menu:{
         main:"控制台代码生成",
@@ -66,7 +68,9 @@ const options: I18nOptions = {
         success: "copied",
         text1: "Please enter the item",
         test2: "please enter the number",
-        execute: "execute"
+        execute: "execute",
+        tips: "If the command is not refreshed, please check the attribute entry again",
+        version:"ToolsVersion:0.1.2 GameVersion:2.0.0"
       },
       menu:{
         main:"Console code generation",

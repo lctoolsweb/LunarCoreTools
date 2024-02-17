@@ -1,0 +1,56 @@
+[
+    {
+        "label": "固定生命",
+        "value": 1
+    },
+    {
+        "label": "固定攻击",
+        "value": 2
+    },
+    {
+        "label": "固定防御",
+        "value": 3
+    },
+    {
+        "label": "百分比生命",
+        "value": 4
+    },
+    {
+        "label": "百分比攻击",
+        "value": 5
+    },
+    {
+        "label": "百分比防御",
+        "value": 6
+    },
+    {
+        "label": "速度",
+        "value": 7
+    },
+    {
+        "label": "暴击率",
+        "value": 8
+    },
+    {
+        "label": "暴击伤害",
+        "value": 9
+    },
+    {
+        "label": "效果命中",
+        "value": 10
+    },
+    {
+        "label": "效果抵抗",
+        "value": 11
+    },
+    {
+        "label": "击破特攻",
+        "value": 12
+    }
+]
+
+
+
+
+
+

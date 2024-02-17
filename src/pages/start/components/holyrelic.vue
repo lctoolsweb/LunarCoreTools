@@ -5,6 +5,17 @@
       <marquee behavior="scroll" direction="left">{{ noticeContent }}</marquee>
     </div>
 
+    <!-- Info 类型的 n-alert，位于右上角 -->
+    <NAlert title="Tips" type="info" closable class="custom-info-alert">
+      <template #icon>
+        <n-icon>
+          <ios-airplane />
+        </n-icon>
+      </template>
+      {{ t('main.tips') }}
+    </NAlert>
+
+
     <!-- 原有的组件内容 -->
     <div class="commuse">
       <div class="commuse-item">
@@ -15,7 +26,6 @@
       <div class="commuse-item">
         <div class="text-slate-900 dark:text-slate-100">{{ t('relic.basestats') }}:</div>
         <a-cascader allow-search v-model="holyrelicnmainvalue" :options="options2" placeholder="" filterable />
-        <!-- <n-select v-model:value="holyrelicnmainvalue" filterable placeholder="选择遗器主属性" :options="options2" /> -->
       </div>
 
       <div class="commuse-item">
@@ -47,10 +57,8 @@
   </div>
 </template>
 
-
-
 <script setup lang="ts">
-import { reactive, ref, computed } from 'vue'
+import { ref, reactive, computed, onMounted, inject } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import holyrelicname from './json/holyrelicname.json'
 import holyrelicnmain from './json/holyrelicnmain.json'
@@ -58,16 +66,15 @@ import holyrelicx from './json/holyrelicnx.json'
 import { Message } from '@arco-design/web-vue'
 import { useAppStore } from '@/store/modules/app'
 import { useI18n } from 'vue-i18n'
+import { IosAirplane } from '@vicons/ionicons4'
+import { NAlert } from 'naive-ui';
 const { t, locale } = useI18n()
 const { text, isSupported, copy } = useClipboard()
 const appStore = useAppStore()
 
 var holyrelicnamevalue = ref('')
 var holyrelicnmainvalue = ref('')
-
 var grade = ref(0)
-var selectedValue = ref()
-var num = ref()
 
 const value = computed(() => {
   var xct = ''
@@ -80,23 +87,26 @@ const value = computed(() => {
   // 删除第一个标识字符 a=头部 b=手部 c=躯干 d=脚部 e=位面球 f=连接绳
   const modifiedValue = holyrelicnmainvalue.value.slice(1);
 
+  // 如果 xct 为空，则使用默认值 1
+  xct = xct || ' 1';
+
   return `/give ${holyrelicnamevalue.value} lv${grade.value} s${modifiedValue}${xct} `
 })
-const options = reactive(holyrelicname)
 
+const options = reactive(holyrelicname)
 const options2 = reactive(holyrelicnmain)
 
 var holyrelicx1 = holyrelicx.map((k) => {
   const obj = {
     isCheck: false,
-    num: 1,
+    num: ref(1),
     label: k.label,
     value: k.value,
   }
   return obj
 })
-const options3 = ref(holyrelicx1)
 
+const options3 = ref(holyrelicx1)
 const message = Message
 
 function copyvalue() {
@@ -105,17 +115,27 @@ function copyvalue() {
     message.success(`已复制${value.value}`)
   }
 }
+
 const send: any = inject("send")
 const showNotice = ref(true)
 const noticeContent = 'LunarCore及其他任何衍生工具都是免费软件，如果你是付费购买的，那你就被骗了，请及时退款并举报。'
 
 // 在页面加载时设置一个延时，用于显示滚动公告，你可以根据需求调整延时时长
 onMounted(() => {
-  setTimeout(() => {
-    showNotice.value = true
-  }, 1000)
-})
+  // 根据浏览器语言设置初始语言
+  locale.value = navigator.language.includes('zh') ? 'zh' : 'en';
 
+  // 使用 import 动态加载 JSON 数据
+  const jsonPath = locale.value ? `./json/${locale.value}/holyrelicnx.json` : './json/zh/holyrelicnx.json';
+
+  import(jsonPath).then((holyrelicData) => {
+    options3.value = holyrelicData.default;
+
+    setTimeout(() => {
+      showNotice.value = true;
+    }, 1000);
+  });
+});
 </script>
 
 <style lang="less" scoped>
@@ -159,6 +179,12 @@ onMounted(() => {
   height: 300px;
   width: 100%;
   overflow-y: auto;
+  .custom-info-alert {
+  width: 30px; /* 你可以根据需要调整宽度 */
+  position: fixed;
+  top: 42px;
+  right: 12px;
+}
 
   .smallho-item {
     margin: 10px 0;

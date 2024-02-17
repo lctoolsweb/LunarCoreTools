@@ -17,7 +17,14 @@
         </router-link>
       </div>
     </div>
-
+    <n-alert title="Tips" type="info" closable class="custom-info-alert">
+      <template #icon>
+        <n-icon>
+          <IosAirplane />
+        </n-icon>
+      </template>
+      {{ t('main.version') }}
+    </n-alert>
     <!-- 将语言切换按钮移到右上角 -->
     <button class="language-toggle" @click="toggleLanguage">
       {{ isChinese ? 'EN' : '中文' }}
@@ -28,6 +35,8 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
 import { ref, onMounted } from 'vue';
+import { IosAirplane } from '@vicons/ionicons4'
+import { NAlert, NIcon } from 'naive-ui';
 
 const { t, locale } = useI18n();
 const isChinese = ref(true);
@@ -110,6 +119,12 @@ onMounted(() => {
   background-color: rgba(52, 152, 219, 0.5);  /* 鼠标悬停时的半透明背景颜色 */
   color: #fff;
 }
+.custom-info-alert {
+  width: 300px; /* 你可以根据需要调整宽度 */
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  }
 
 
 </style>
