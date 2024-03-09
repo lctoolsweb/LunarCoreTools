@@ -30,7 +30,7 @@ export const ANALYSIS = true;
 export const MARKDOWN = true;
 
 // 代码压缩
-export const COMPRESSION = true;
+export const COMPRESSION = false;
 
 
 // 删除 console
