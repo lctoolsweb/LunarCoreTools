@@ -1,0 +1,63 @@
+[
+    {
+      "title": "获取所有角色",
+      "value": "/giveall avatars"
+    },
+    {
+      "title": "获得所有武器",
+      "value": "/giveall lightcones lv80 r5"
+    },
+    {
+      "title": "获得所有材料",
+      "value": "/giveall materials"
+    },
+    {
+      "title": "站场角色满级",
+      "value": "/avatar lv80 s10"
+    },
+    {
+      "title": "均衡等级6",
+      "value": "/worldlevel 6"
+    },
+    {
+      "title": "开拓等级满级",
+      "value": "/give 22 x999999"
+    },
+    {
+      "title": "1000星轨通票",
+      "value": "/give 101 x1000"
+    },
+    {
+      "title": "1000星轨专票",
+      "value": "/give 102 x1000"
+    },
+    {
+      "title": "清除所有物品",
+      "value": "/clear all"
+    },
+    {
+      "title": "回满血",
+      "value": "/heal"
+    },
+    {
+      "title": "在世界中补充战技点",
+      "value": "/refill"
+    },
+    {
+      "title": "属性特别离谱的遗器",
+      "value": "/give 63126 x1 lv999 s2 7:10000 8:10000 9:10000 5:10000"
+    },
+    {
+      "title": "将配队改为四个托帕",
+      "value": "/lineup 1112 1112 1112 1112"
+    },
+    {
+      "title": "切换男主(重启生效)",
+      "value": "/gender male"
+    },
+    {
+      "title": "切换女主(重启生效)",
+      "value": "/gender female"
+    }
+  ]
+  

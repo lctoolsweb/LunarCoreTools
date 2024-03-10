@@ -13,7 +13,11 @@ The page will automatically adjust the language according to the current browser
 
 ## 运行环境
 *node 18*，其他版本不保证能稳定运行.下方所有命令请在Windows终端中运行
-## 安装依赖
+
+## 自动部署
+
+无论如何，我们始终推荐您使用[LunarCoreTools-Launcher](https://github.com/lctoolsweb/LunarCoreToolsLauncher)自动部署项目
+## 安装依赖(手动安装)
 `
 npm install
 `

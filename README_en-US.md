@@ -10,7 +10,14 @@ This project fully complies with relevant open-source licenses, and you are free
 ## Multi-language
 The page will automatically adjust the language according to the current browser language. Currently, it only supports Chinese and English, and some translation work is still incomplete. If you want to contribute to the internationalization of the project, please submit a PR.
 
-## Installation Dependencies
+## Automated deployment
+In any case, we always recommend that you use [LunarCoreTools-Launcher](https://github.com/lctoolsweb/LunarCoreToolsLauncher)to automatically deploy your project
+
+
+
+
+## Installation Dependencies (Manual installation)
+
 ```bash
 npm install
 ```

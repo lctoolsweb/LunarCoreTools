@@ -29,14 +29,20 @@
     <button class="language-toggle" @click="toggleLanguage">
       {{ isChinese ? 'EN' : '中文' }}
     </button>
+
+    <!-- Add a footer to display page views -->
+    <div class="footer">
+      {{ t('main.views') }} {{ pageViews }} {{ t('main.time') }}
+    </div>
   </div>
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n';
+import axios from 'axios';
 import { ref, onMounted } from 'vue';
-import { IosAirplane } from '@vicons/ionicons4'
+import { IosAirplane } from '@vicons/ionicons4';
 import { NAlert, NIcon } from 'naive-ui';
+import { useI18n } from 'vue-i18n';
 
 const { t, locale } = useI18n();
 const isChinese = ref(true);
@@ -47,41 +53,48 @@ const translatedText = {
   start: t('ct.start'),
 };
 
-const toggleLanguage = () => {
-  isChinese.value = !isChinese.value;
-  locale.value = isChinese.value ? 'en' : 'zh';
-  
-  translatedText.title = t('ct.title');
-  translatedText.introduce = t('ct.introduce');
-  translatedText.start = t('ct.start');
+const pageViews = ref(0);
+
+// Define a separate async function to fetch page views
+const fetchPageViews = async () => {
+  try {
+    const response = await axios.get('https://finicounter.eu.org/counter?host=lctoolsweb.vercel.app');
+    pageViews.value = response.data.views;
+  } catch (error) {
+    console.error('Failed to fetch page views:', error);
+  }
 };
 
+// Call the async function inside onMounted
 onMounted(() => {
-  
+  fetchPageViews();
+
+  // Existing code for language toggle and other features
   const browserLanguage = navigator.language.toLowerCase();
   isChinese.value = browserLanguage.startsWith('zh');
   locale.value = isChinese.value ? 'zh' : 'en';
 
-  // 更新翻译文本
+  // Update translatedText if needed
   translatedText.title = t('ct.title');
   translatedText.introduce = t('ct.introduce');
   translatedText.start = t('ct.start');
 });
 </script>
+
 <style lang="less">
 .ct {
   width: 500px;
   margin: auto;
   margin-top: 20vh;
-  text-align: center; 
+  text-align: center;
 }
 
 .centered-image {
-  width: 100%; 
-  max-width: 150px; 
-  margin: 0 auto 10px; 
-  display: block; 
-  border-radius: 10px; 
+  width: 100%;
+  max-width: 150px;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 10px;
 }
 
 .title {
@@ -107,8 +120,8 @@ onMounted(() => {
   top: 70px;
   right: 30px;
   padding: 10px;
-  background-color: transparent;  /* 将背景颜色设置为透明 */
-  border: 2px solid transparent;  /* 将边框颜色设置为透明 */
+  background-color: transparent;
+  border: 2px solid transparent;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -116,16 +129,24 @@ onMounted(() => {
 }
 
 .language-toggle:hover {
-  background-color: rgba(52, 152, 219, 0.5);  /* 鼠标悬停时的半透明背景颜色 */
+  background-color: rgba(52, 152, 219, 0.5);
   color: #fff;
 }
+
 .custom-info-alert {
-  width: 300px; /* 你可以根据需要调整宽度 */
+  width: 300px;
   position: fixed;
   top: 120px;
   right: 20px;
-  }
+}
 
-
+/* Add styles for the footer */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #666;
+}
 </style>
-

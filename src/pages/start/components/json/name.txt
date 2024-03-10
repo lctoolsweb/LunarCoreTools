@@ -1,0 +1,137 @@
+1002020 : Vagrant
+1002030 : Silvermane Cannoneer
+1002040 : Silvermane Soldier
+1002050 : Silvermane Gunner
+1003010 : Silvermane Lieutenant
+1003015 : Silvermane Lieutenant (Bug)
+1003016 : Silvermane Lieutenant
+1004010 : Cocolia
+1004011 : Cocolia (Complete)
+1004020 : Gepard
+1004021 : Gepard (Complete)
+1004030 : Bronya
+1012020 : Automaton Spider
+1012030 : Automaton Beetle
+1013010 : Automaton Grizzly
+1013011 : Automaton Grizzly (Bug)
+1013012 : Automaton Grizzly (Complete)
+1013020 : Automaton Direwolf
+1013021 : Automaton Direwolf
+1013022 : Automaton Direwolf (Bug)
+1014010 : Svarog
+1014011 : Svarog (Complete)
+1022010 : Everwinter Shadewalker
+1022020 : Incineration Shadewalker
+1023010 : Searing Prowler
+1023011 : Searing Prowler (Bug)
+1023012 : Searing Prowler
+1023020 : Frigid Prowler
+1023021 : Frigid Prowler
+1023022 : Frigid Prowler (Bug)
+2002010 : Cloud Knights Patroller
+2002030 : Wraith Warden
+2004010 : Stellaron Hunter: Kafka
+2004011 : Stellaron Hunter: Kafka (Complete)
+2004020 : Cloud Knight Lieutenant: Yanqing
+2004021 : Cloud Knight Lieutenant: Yanqing (Complete)
+2011010 : Entranced Ingenium: Obedient Dracolion
+2011020 : Entranced Ingenium: Golden Cloud Toad
+2012010 : Entranced Ingenium: Illumination Dragonfish
+2012011 : Entranced Ingenium: Illumination Dragonfish
+2013010 : Aurumaton Gatekeeper
+2013011 : Aurumaton Gatekeeper
+2013012 : Aurumaton Gatekeeper (Bug)
+2013020 : Aurumaton Spectral Envoy
+2013021 : Aurumaton Spectral Envoy
+2013022 : Aurumaton Spectral Envoy (Bug)
+2022010 : Mara-Struck Soldier
+2022011 : Mara-Struck Soldier
+2022020 : Disciples of Sanctus Medicus: Internal Alchemist
+2022021 : Disciples of Sanctus Medicus: Internal Alchemist
+2022040 : Abundance Sprite: Golden Hound
+2022050 : Abundance Sprite: Wooden Lupus
+2022060 : Disciples of Sanctus Medicus: Ballistarius
+2022061 : Disciples of Sanctus Medicus: Ballistarius
+2022110 : Mara-Struck Warden
+2023010 : Disciples of Sanctus Medicus: Shape Shifter
+2023011 : Disciples of Sanctus Medicus: Shape Shifter
+2023012 : Disciples of Sanctus Medicus: Shape Shifter (Bug)
+2023020 : Abundance Sprite: Malefic Ape
+2023021 : Abundance Sprite: Malefic Ape
+2023022 : Abundance Sprite: Malefic Ape (Bug)
+2023030 : The Ascended
+2023031 : The Ascended
+2023032 : The Ascended (Bug)
+2024010 : Abundant Ebon Deer
+2024011 : Abundant Ebon Deer (Complete)
+2024020 : Cirrus
+3001010 : Dreamjolt Troupe's Spring Loader
+3001020 : Dreamjolt Troupe's Birdskull
+3001021 : Dreamjolt Troupe's Birdskull
+3002010 : Double-Faced Guest
+3002011 : null
+3002030 : Dreamjolt Troupe's Bubble Hound
+3002050 : Lordly Trashcan
+3003010 : Dreamjolt Troupe's Beyond Overcooked
+3003011 : Dreamjolt Troupe's Beyond Overcooked
+3003020 : Dreamjolt Troupe's Sweet Gorilla
+3003021 : Dreamjolt Troupe's Sweet Gorilla
+3011010 : Memory Zone Meme "Allseer"
+3012020 : null
+3014020 : Memory Zone Meme "Something Unto Death"
+3024010 : Argenti
+3024011 : Argenti (Complete)
+3024020 : Stellaron Hunter: Sam
+7002010 : Imaginary Weaver
+7003030 : Decaying Shadow
+7010010 : Automaton Spider
+7010011 : null
+7032010 : Grunt: Field Personnel
+7033010 : Senior Staff: Team Leader
+8001010 : Flamespawn
+8001020 : Frostspawn
+8001030 : Mask of No Thought
+8001040 : Thunderspawn
+8001050 : Windspawn
+8002010 : Imaginary Weaver
+8002040 : Warp Trotter
+8002050 : Sequence Trotter
+8002058 : Sequence Trotter
+8002059 : Sequence Trotter (Rare)
+8002060 : Trotter of Destruction
+8002070 : Trotter of Abundance
+8002080 : Trotter of Preservation
+8003010 : Ice Out of Space
+8003011 : Ice Out of Space (Bug)
+8003012 : Ice Out of Space
+8003020 : Blaze Out of Space
+8003021 : Blaze Out of Space
+8003022 : Blaze Out of Space (Bug)
+8003030 : Guardian Shadow
+8003031 : Guardian Shadow
+8003032 : Guardian Shadow (Bug)
+8003040 : Decaying Shadow
+8003041 : Decaying Shadow
+8003042 : Decaying Shadow (Bug)
+8003050 : Stormbringer
+8003051 : Stormbringer
+8003052 : Stormbringer (Bug)
+8011010 : Baryon
+8011020 : Antibaryon
+8012010 : Voidranger: Reaver
+8012020 : Voidranger: Distorter
+8012030 : Voidranger: Eliminator
+8013010 : Voidranger: Trampler
+8013012 : Voidranger: Trampler
+8013013 : Voidranger: Trampler (Bug)
+8013014 : Voidranger: Trampler
+8022010 : Juvenile Sting
+8024010 : Swarm: True Sting (Complete)
+8024011 : Swarm: True Sting
+8032010 : Grunt: Field Personnel
+8032020 : Grunt: Security Personnel
+8033010 : Senior Staff: Team Leader
+8033011 : Senior Staff: Team Leader (Bug)
+8035010 : null
+9002303 : null
+20220501 : Abundance Sprite: Wooden Lupus

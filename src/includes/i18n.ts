@@ -16,7 +16,9 @@ const options: I18nOptions = {
         text2: "请输入数量",
         execute: "执行",
         tips: "如果指令未刷新，请重新勾选属性词条",
-        version:"工具版本v0.1.2 游戏版本2.0.0"
+        version:"工具版本v0.1.2 游戏版本2.0.0",
+        views:"截至目前,LunarCoreWebTools已经被安装/访问了",
+        time:"次   © 2024 lctoolsweb",
       },
       menu:{
         main:"控制台代码生成",
@@ -33,6 +35,14 @@ const options: I18nOptions = {
         scene:"场景",
         remotecontrol:"远程"
 
+
+      },
+      monster:{
+        monster1:"局外显示怪物",
+        monster2:"局内战斗怪物",
+        number:"数量",
+        level:"等级",
+        radius:"半径",
 
       },
       
@@ -70,8 +80,18 @@ const options: I18nOptions = {
         test2: "please enter the number",
         execute: "execute",
         tips: "If the command is not refreshed, please check the attribute entry again",
-        version:"ToolsVersion:0.1.2 GameVersion:2.0.0"
+        version:"ToolsVersion:0.1.2 GameVersion:2.0.0",
+        views:"Up to now, LunarCoreWebTools has been accessed/installed",
+        time:"times  © 2024 lctoolsweb",
       },
+      monster:{
+        monster1: "Outsider Show Monster",
+        monster2: "In-game battle monster",
+        number: "quantity",
+        level: "level",
+        radius: "radius",
+
+},
       menu:{
         main:"Console code generation",
         frequently:"frequently used",

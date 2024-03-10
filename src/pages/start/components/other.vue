@@ -2,7 +2,7 @@
   <div>
     <!-- 滚动公告 -->
     <div class="scrolling-notice" v-if="showNotice">
-      <marquee behavior="scroll" direction="left">{{ noticeContent }}</marquee>
+      <marquee behavior="scroll" direction="left">{{ t('main.notice') }}</marquee>
     </div>
 
     <!-- 原有的组件内容 -->
@@ -26,10 +26,11 @@ import { reactive, ref, computed, inject, onMounted } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import { Message } from '@arco-design/web-vue'
 import { useAppStore } from '@/store/modules/app'
+import { useI18n } from 'vue-i18n'
 
 const { text, isSupported, copy } = useClipboard()
 const appStore = useAppStore()
-
+const { t, locale } = useI18n()
 const options = reactive([
   {
     title: '获得全部角色',
