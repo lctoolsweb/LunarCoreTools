@@ -10,7 +10,7 @@ echo [ > %outputFile%
 for /f "tokens=1,* delims=:" %%a in (%inputFile%) do (
     set "value=%%a"
     set "label=%%b"
-    rem ÒÆ³ýÇ°µ¼ºÍÎ²Ëæ¿Õ¸ñ
+    rem ç§»é™¤å‰å¯¼å’Œå°¾éšç©ºæ ¼
     for /f "tokens=* delims= " %%c in ("!value!") do set "value=%%c"
     for /f "tokens=* delims= " %%d in ("!label!") do set "label=%%d"
     echo   { >> %outputFile%

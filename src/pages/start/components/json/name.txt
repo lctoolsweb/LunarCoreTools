@@ -1,137 +1,96 @@
-1002020 : Vagrant
-1002030 : Silvermane Cannoneer
-1002040 : Silvermane Soldier
-1002050 : Silvermane Gunner
-1003010 : Silvermane Lieutenant
-1003015 : Silvermane Lieutenant (Bug)
-1003016 : Silvermane Lieutenant
-1004010 : Cocolia
-1004011 : Cocolia (Complete)
-1004020 : Gepard
-1004021 : Gepard (Complete)
-1004030 : Bronya
-1012020 : Automaton Spider
-1012030 : Automaton Beetle
-1013010 : Automaton Grizzly
-1013011 : Automaton Grizzly (Bug)
-1013012 : Automaton Grizzly (Complete)
-1013020 : Automaton Direwolf
-1013021 : Automaton Direwolf
-1013022 : Automaton Direwolf (Bug)
-1014010 : Svarog
-1014011 : Svarog (Complete)
-1022010 : Everwinter Shadewalker
-1022020 : Incineration Shadewalker
-1023010 : Searing Prowler
-1023011 : Searing Prowler (Bug)
-1023012 : Searing Prowler
-1023020 : Frigid Prowler
-1023021 : Frigid Prowler
-1023022 : Frigid Prowler (Bug)
-2002010 : Cloud Knights Patroller
-2002030 : Wraith Warden
-2004010 : Stellaron Hunter: Kafka
-2004011 : Stellaron Hunter: Kafka (Complete)
-2004020 : Cloud Knight Lieutenant: Yanqing
-2004021 : Cloud Knight Lieutenant: Yanqing (Complete)
-2011010 : Entranced Ingenium: Obedient Dracolion
-2011020 : Entranced Ingenium: Golden Cloud Toad
-2012010 : Entranced Ingenium: Illumination Dragonfish
-2012011 : Entranced Ingenium: Illumination Dragonfish
-2013010 : Aurumaton Gatekeeper
-2013011 : Aurumaton Gatekeeper
-2013012 : Aurumaton Gatekeeper (Bug)
-2013020 : Aurumaton Spectral Envoy
-2013021 : Aurumaton Spectral Envoy
-2013022 : Aurumaton Spectral Envoy (Bug)
-2022010 : Mara-Struck Soldier
-2022011 : Mara-Struck Soldier
-2022020 : Disciples of Sanctus Medicus: Internal Alchemist
-2022021 : Disciples of Sanctus Medicus: Internal Alchemist
-2022040 : Abundance Sprite: Golden Hound
-2022050 : Abundance Sprite: Wooden Lupus
-2022060 : Disciples of Sanctus Medicus: Ballistarius
-2022061 : Disciples of Sanctus Medicus: Ballistarius
-2022110 : Mara-Struck Warden
-2023010 : Disciples of Sanctus Medicus: Shape Shifter
-2023011 : Disciples of Sanctus Medicus: Shape Shifter
-2023012 : Disciples of Sanctus Medicus: Shape Shifter (Bug)
-2023020 : Abundance Sprite: Malefic Ape
-2023021 : Abundance Sprite: Malefic Ape
-2023022 : Abundance Sprite: Malefic Ape (Bug)
-2023030 : The Ascended
-2023031 : The Ascended
-2023032 : The Ascended (Bug)
-2024010 : Abundant Ebon Deer
-2024011 : Abundant Ebon Deer (Complete)
-2024020 : Cirrus
-3001010 : Dreamjolt Troupe's Spring Loader
-3001020 : Dreamjolt Troupe's Birdskull
-3001021 : Dreamjolt Troupe's Birdskull
-3002010 : Double-Faced Guest
-3002011 : null
-3002030 : Dreamjolt Troupe's Bubble Hound
-3002050 : Lordly Trashcan
-3003010 : Dreamjolt Troupe's Beyond Overcooked
-3003011 : Dreamjolt Troupe's Beyond Overcooked
-3003020 : Dreamjolt Troupe's Sweet Gorilla
-3003021 : Dreamjolt Troupe's Sweet Gorilla
-3011010 : Memory Zone Meme "Allseer"
-3012020 : null
-3014020 : Memory Zone Meme "Something Unto Death"
-3024010 : Argenti
-3024011 : Argenti (Complete)
-3024020 : Stellaron Hunter: Sam
-7002010 : Imaginary Weaver
-7003030 : Decaying Shadow
-7010010 : Automaton Spider
-7010011 : null
-7032010 : Grunt: Field Personnel
-7033010 : Senior Staff: Team Leader
-8001010 : Flamespawn
-8001020 : Frostspawn
-8001030 : Mask of No Thought
-8001040 : Thunderspawn
-8001050 : Windspawn
-8002010 : Imaginary Weaver
-8002040 : Warp Trotter
-8002050 : Sequence Trotter
-8002058 : Sequence Trotter
-8002059 : Sequence Trotter (Rare)
-8002060 : Trotter of Destruction
-8002070 : Trotter of Abundance
-8002080 : Trotter of Preservation
-8003010 : Ice Out of Space
-8003011 : Ice Out of Space (Bug)
-8003012 : Ice Out of Space
-8003020 : Blaze Out of Space
-8003021 : Blaze Out of Space
-8003022 : Blaze Out of Space (Bug)
-8003030 : Guardian Shadow
-8003031 : Guardian Shadow
-8003032 : Guardian Shadow (Bug)
-8003040 : Decaying Shadow
-8003041 : Decaying Shadow
-8003042 : Decaying Shadow (Bug)
-8003050 : Stormbringer
-8003051 : Stormbringer
-8003052 : Stormbringer (Bug)
-8011010 : Baryon
-8011020 : Antibaryon
-8012010 : Voidranger: Reaver
-8012020 : Voidranger: Distorter
-8012030 : Voidranger: Eliminator
-8013010 : Voidranger: Trampler
-8013012 : Voidranger: Trampler
-8013013 : Voidranger: Trampler (Bug)
-8013014 : Voidranger: Trampler
-8022010 : Juvenile Sting
-8024010 : Swarm: True Sting (Complete)
-8024011 : Swarm: True Sting
-8032010 : Grunt: Field Personnel
-8032020 : Grunt: Security Personnel
-8033010 : Senior Staff: Team Leader
-8033011 : Senior Staff: Team Leader (Bug)
-8035010 : null
-9002303 : null
-20220501 : Abundance Sprite: Wooden Lupus
+20000 : 锋镝
+20001 : 物穰
+20002 : 天倾
+20003 : 琥珀
+20004 : 幽邃
+20005 : 齐颂
+20006 : 智库
+20007 : 离弦
+20008 : 嘉果
+20009 : 乐圮
+20010 : 戍御
+20011 : 渊环
+20012 : 轮契
+20013 : 灵钥
+20014 : 相抗
+20015 : 蕃息
+20016 : 俱殁
+20017 : 开疆
+20018 : 匿影
+20019 : 调和
+20020 : 睿见
+21000 : 一场术后对话
+21001 : 晚安与睡颜
+21002 : 余生的第一天
+21003 : 唯有沉默
+21004 : 记忆中的模样
+21005 : 鼹鼠党欢迎你
+21006 : 「我」的诞生
+21007 : 同一种心情
+21008 : 猎物的视线
+21009 : 朗道的选择
+21010 : 论剑
+21011 : 与行星相会
+21012 : 秘密誓心
+21013 : 别让世界静下来
+21014 : 此时恰好
+21015 : 决心如汗珠般闪耀
+21016 : 宇宙市场趋势
+21017 : 点个关注吧！
+21018 : 舞！舞！舞！
+21019 : 在蓝天下
+21020 : 天才们的休憩
+21021 : 等价交换
+21022 : 延长记号
+21023 : 我们是地火
+21024 : 春水初生
+21025 : 过往未来
+21026 : 汪！散步时间！
+21027 : 早餐的仪式感
+21028 : 暖夜不会漫长
+21029 : 后会有期
+21030 : 这就是我啦！
+21031 : 重返幽冥
+21032 : 镂月裁云之意
+21033 : 无处可逃
+21034 : 今日亦是和平的一日
+21035 : 何物为真
+21036 : 美梦小镇大冒险
+21037 : 最后的赢家
+21038 : 在火的远处
+21039 : 织造命运之线
+21040 : 银河沦陷日
+21041 : 好戏开演
+21042 : 铭记于心的约定
+21043 : 两个人的演唱会
+22000 : 新手任务开始前
+22001 : 嘿，我在这儿
+23000 : 银河铁道之夜
+23001 : 于夜色中
+23002 : 无可取代的东西
+23003 : 但战斗还未结束
+23004 : 以世界之名
+23005 : 制胜的瞬间
+23006 : 只需等待
+23007 : 雨一直下
+23008 : 棺的回响
+23009 : 到不了的彼岸
+23010 : 拂晓之前
+23011 : 她已闭上双眼
+23012 : 如泥酣眠
+23013 : 时节不居
+23014 : 此身为剑
+23015 : 比阳光更明亮的
+23016 : 烦恼着，幸福着
+23017 : 惊魂夜
+23018 : 片刻，留在眼底
+23019 : 镜中故我
+23020 : 纯粹思维的洗礼
+23021 : 游戏尘寰
+23022 : 重塑时光之忆
+23023 : 命运从未公平
+23024 : 行于流逝的岸
+24000 : 记一位星神的陨落
+24001 : 星海巡航
+24002 : 记忆的质料
+24003 : 孤独的疗愈

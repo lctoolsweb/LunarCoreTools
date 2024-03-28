@@ -1,14 +1,14 @@
 [
     {
-      "title": "获取所有角色",
+      "title": "All avatars",
       "value": "/giveall avatars"
     },
     {
-      "title": "获得所有武器",
+      "title": "all lightcones",
       "value": "/giveall lightcones lv80 r5"
     },
     {
-      "title": "获得所有材料",
+      "title": "all  materials",
       "value": "/giveall materials"
     },
     {
