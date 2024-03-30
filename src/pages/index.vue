@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <!-- 页面内容 -->
     <div class="ct">
       <!-- 添加图片 -->
       <img src="https://img.morax.top/file/4b572184f3de63e1c361f.png" alt="Your Image" class="centered-image" />
@@ -79,7 +79,91 @@ onMounted(() => {
   translatedText.introduce = t('ct.introduce');
   translatedText.start = t('ct.start');
 });
+
+// 切换语言的方法
+const toggleLanguage = () => {
+  locale.value = isChinese.value ? 'en' : 'zh'; // 切换语言
+  isChinese.value = !isChinese.value; // 切换按钮文字
+  updateTranslatedText(); // 更新翻译文本
+};
+
+// 更新翻译文本
+const updateTranslatedText = () => {
+  translatedText.title = t('ct.title');
+  translatedText.introduce = t('ct.introduce');
+  translatedText.start = t('ct.start');
+};
 </script>
+
+<style lang="less">
+.ct {
+  width: 500px;
+  margin: auto;
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.centered-image {
+  width: 100%;
+  max-width: 150px;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+}
+
+.introduce {
+  margin-top: 10px;
+  color: #545343;
+  text-align: center;
+  font-size: 16px;
+}
+
+.start {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.language-toggle {
+  position: fixed;
+  top: 70px;
+  right: 30px;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.language-toggle:hover {
+  background-color: rgba(52, 152, 219, 0.5);
+  color: #fff;
+}
+
+.custom-info-alert {
+  width: 300px;
+  position: fixed;
+  top: 120px;
+  right: 20px;
+}
+
+/* Add styles for the footer */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #666;
+}
+</style>
 
 <style lang="less">
 .ct {
