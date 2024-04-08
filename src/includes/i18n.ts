@@ -34,6 +34,7 @@ const options: I18nOptions = {
         food:"食物",
         avatar:"头像",
         scene:"场景",
+        about:"关于",
         remotecontrol:"远程"
 
 
@@ -106,6 +107,7 @@ const options: I18nOptions = {
         food:"food",
         avatar:"avatar",
         scene:"scene",
+        about:"about",
         remotecontrol:"Remote_control"
 
 

@@ -8,6 +8,7 @@ dist-ssr
 .env.local
 .env.*.local
 .eslintcache
+.vs
 
 
 # Log files
