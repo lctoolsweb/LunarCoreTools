@@ -36,7 +36,8 @@ const datav = reactive([
   { name: 'food', path: "/start/food" },
   { name: 'avatar', path: "/start/page1" },
   { name: 'scene', path: "/start/scene" },
-  { name: 'RemoteControl', path: "/start/about" }, // Modified key to match your translation
+  { name: 'RemoteControl', path: "/start/control" }, // Modified key to match your translation
+  { name: 'about', path: "/start/about" },
 ])
 
 function topath(path: string) {

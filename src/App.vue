@@ -1,5 +1,6 @@
 <template>
   <router-view></router-view>
+  <Watermark />
 </template>
 <script setup lang="ts">
 import { title } from 'process'
@@ -7,6 +8,7 @@ import { useAppStore } from './store/modules/app'
 
 import { ref, watch,onMounted } from 'vue'
 import { darkTheme } from 'naive-ui'
+import Watermark from './components/Watermark.vue'
 const appStore = useAppStore()
 const apptheme = ref()
 
@@ -26,6 +28,7 @@ watch(
     immediate: true,
   },
 )
+
 
 onMounted(() => {
   const WSS = localStorage.getItem("WSS")

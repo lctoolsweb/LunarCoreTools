@@ -16,6 +16,10 @@ let constantRoutes = [
         component: () => import('@/pages/start/components/commuse.vue'),
       },
       {
+        path: "/start/about",
+        component: () => import('@/pages/start/components/about.vue'),
+      },
+      {
         path: "/start/thing",
         component: () => import('@/pages/start/components/thing.vue'),
       },
@@ -40,8 +44,8 @@ let constantRoutes = [
         component: () => import('@/pages/start/components/other.vue'),
       },
       {
-        path: "/start/about",
-        component: () => import('@/pages/start/components/about.vue'),
+        path: "/start/control",
+        component: () => import('@/pages/start/components/control.vue'),
       },
       {
         path: "/start/weapon",
