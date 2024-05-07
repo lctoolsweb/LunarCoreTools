@@ -11,10 +11,10 @@ export default {
   setup() {
     const showWatermark = ref(true)
 
-    // 定义两条不同的水印文字
+    
     const watermarks = ref([
-      'LunarCoreWebTools', // 第一条水印文字
-      '@lctweb team' // 第二条水印文字
+      'LunarCoreWebTools', 
+      
     ])
 
     return { showWatermark, watermarks }

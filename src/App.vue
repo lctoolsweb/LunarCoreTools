@@ -7,7 +7,7 @@ import { title } from 'process'
 import { useAppStore } from './store/modules/app'
 
 import { ref, watch,onMounted } from 'vue'
-import { darkTheme } from 'naive-ui'
+import { darkTheme, lightTheme } from 'naive-ui'
 import Watermark from './components/Watermark.vue'
 const appStore = useAppStore()
 const apptheme = ref()
@@ -21,7 +21,7 @@ watch(
     if (theme == 'dark') {
       apptheme.value = darkTheme
     } else {
-      apptheme.value = null
+      apptheme.value = lightTheme
     }
   },
   {

@@ -15,8 +15,8 @@ const options: I18nOptions = {
         text1: "请输入物品",
         text2: "请输入数量",
         execute: "执行",
-        tips: "如果指令未刷新，请重新勾选属性词条",
-        version:"工具版本v0.1.3 游戏版本2.1.0",
+        tips: "请先在下方的输入框中输入一个数字，然后再勾选属性词条，例如1代表该词条强化一次",
+        version:"工具版本v0.1.4 游戏版本2.1.0",
         views:"截至目前,LunarCoreWebTools已经被安装/访问了",
         time:"次   © 2024 lctoolsweb",
         introduce:"适用于LunarCore的web命令生成器",
@@ -35,7 +35,8 @@ const options: I18nOptions = {
         avatar:"头像",
         scene:"场景",
         about:"关于",
-        remotecontrol:"远程"
+        remotecontrol:"远程",
+        suggest:"推荐"
 
 
       },
@@ -108,7 +109,8 @@ const options: I18nOptions = {
         avatar:"avatar",
         scene:"scene",
         about:"about",
-        remotecontrol:"Remote_control"
+        remotecontrol:"Remote_control",
+        suggest:"suggest"
 
 
       },

@@ -19,8 +19,8 @@
 
       <div class="generate">
         <a-input v-model="value" placeholder="" />
-        <a-button type="outline" @click="copyvalue">复制</a-button>
-        <a-button type="outline" v-if="appStore.isLogin" @click="send(value)">执行</a-button>
+        <a-button type="primary" shape="round" size="large" @click="copyvalue">复制</a-button>
+        <a-button type="primary" shape="round" size="large" @click="execute">执行</a-button>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@ import { useClipboard } from '@vueuse/core'
 import { Message } from '@arco-design/web-vue'
 import food from './json/food.json'
 import { useAppStore } from '@/store/modules/app'
-
+import axios from 'axios';
 const { text, isSupported, copy } = useClipboard()
 const appStore = useAppStore()
 
@@ -43,7 +43,38 @@ var num = ref(1)
 const value = computed(() => {
   return `${value3.value} ${value2.value} x${num.value}`
 })
+const execute = () => {
+  
+  const address = localStorage.getItem('address')
+  const uid = localStorage.getItem('uid')
+  const password = localStorage.getItem('password')
 
+  if (!address || !uid || !password) {
+    
+    Message.info('用户未登录，请重试')
+  } else {
+    
+    const command = `/give ${value3.value} ${value2.value} x${num.value}`
+    const data = { uid, password, command }
+
+    
+    axios.post(address, data)
+      .then(response => {
+        
+        if (response.data.retcode === 200) {
+          message.success('执行成功！')
+        } else {
+          message.error('执行失败！')
+        }
+        console.log(response)
+      })
+      .catch(error => {
+        
+        message.error('执行失败！')
+        console.error(error)
+      })
+  }
+}
 const options = reactive(food)
 
 const message = Message
@@ -104,5 +135,40 @@ onMounted(() => {
   display: flex;
   align-items: center;
   margin-left: 100px;
+}
+@media screen and (max-width: 768px) {
+  .commuse {
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .commuse-item {
+    margin: 18px 0 10px; 
+  }
+
+  .commuse-item > div:nth-child(1) {
+    width: auto; 
+    text-align: left; 
+    padding: 0; 
+    margin-bottom: 5px; 
+  }
+
+  .generate {
+    display: block; 
+    margin-left: 0; 
+    width: 100%; 
+    margin-bottom: 80px; 
+    margin-top: 10px; 
+    text-align: center; 
+  }
+  .generate > .arco-input {
+    margin-bottom: 10px; 
+  }
+  .generate button { 
+    display: block; 
+    width: 100%; 
+    margin-top: 10px; 
+    
+  }
 }
 </style>

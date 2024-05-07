@@ -22,8 +22,8 @@
   
         <div class="generate">
           <a-input v-model="value" placeholder="" />
-          <a-button type="outline" @click="copyvalue">{{ t('main.copy') }}</a-button>
-          <a-button type="outline" v-if="appStore.isLogin" @click="send(value)">{{ t('main.execute') }}</a-button>
+          <a-button type="primary" shape="round" size="large" @click="copyvalue">{{ t('main.copy') }}</a-button>
+          <a-button type="primary" shape="round" size="large" @click="execute">执行</a-button>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
   import { Message } from '@arco-design/web-vue'
   import { useAppStore } from '@/store/modules/app'
   import { useI18n } from 'vue-i18n'
-  
+  import axios from 'axios'
   const appStore = useAppStore()
   const { text, isSupported, copy } = useClipboard()
   const { t, locale } = useI18n()
@@ -59,10 +59,42 @@
   }
   
   const send: any = inject("send")
+  const execute = () => {
+  
+  const address = localStorage.getItem('address')
+  const uid = localStorage.getItem('uid')
+  const password = localStorage.getItem('password')
+
+  if (!address || !uid || !password) {
+    
+    Message.info('用户未登录，请重试')
+  } else {
+    
+    const command = `/give ${value2.value} x${num.value}`
+    const data = { uid, password, command }
+
+    
+    axios.post(address, data)
+      .then(response => {
+        
+        if (response.data.retcode === 200) {
+          message.success('执行成功！')
+        } else {
+          message.error('执行失败！')
+        }
+        console.log(response)
+      })
+      .catch(error => {
+        
+        message.error('执行失败！')
+        console.error(error)
+      })
+  }
+}
   
   const showNotice = ref(true)
   
-  // 在页面加载时设置一个延时，用于显示滚动公告，你可以根据需求调整延时时长
+  
   onMounted(() => {
     // 根据浏览器语言设置初始语言
     locale.value = navigator.language.includes('zh') ? 'zh' : 'en'
@@ -103,6 +135,7 @@
     .commuse-item {
       display: flex;
       align-items: center;
+      
       color: #000;
       margin: 18px 0;
   
@@ -158,5 +191,40 @@
       align-items: center;
       margin-left: 100px;
     }
+    @media screen and (max-width: 768px) {
+  .commuse {
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .commuse-item {
+    margin: 18px 0 10px; 
+  }
+
+  .commuse-item > div:nth-child(1) {
+    width: auto; 
+    text-align: left; 
+    padding: 0; 
+    margin-bottom: 5px; 
+  }
+
+  .generate {
+    display: block; 
+    margin-left: 0; 
+    width: 100%; 
+    margin-bottom: 80px; 
+    margin-top: 10px; 
+    text-align: center; 
+  }
+  .generate > .arco-input {
+    margin-bottom: 10px; 
+  }
+  .generate button { 
+    display: block; 
+    width: 100%; 
+    margin-top: 10px; 
+    
+  }
+}
   </style>
   

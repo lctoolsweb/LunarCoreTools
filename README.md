@@ -1,6 +1,8 @@
 中文 | [English](README_en-US.md)
 
 ![LunarCoreTools](https://socialify.git.ci/lctoolsweb/LunarCoreTools/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fimg.morax.top%2Ffile%2F2578855f05450d5878252.png&name=1&pulls=1&stargazers=1&theme=Light)
+**因学业等诸多原因，本项目更新节奏可能会放缓，若您想要参与开发或者接手项目，请提交pr或issue**
+
 ## 免责声明
 本项目完全遵守相关的开源协议，您可以根据自己的意愿自由地更改源码  
 因用于商业用途而导致的任何法律后果，包括但不限于损失、责任、索赔或其他相关事宜，本项目的开发者概不负责。  
@@ -48,5 +50,6 @@ http-server
 
 ## 更新日志
 
-2024/02/06-移动端初步适配，version:0.0.1→0.1.2
-2024/02/16-多语言支持
+2024/02/06-移动端初步适配，version:0.0.1→0.1.2  
+2024/02/16-多语言支持  
+2024/05/07 升级版本至0.1.4 添加远程执行命令功能，优化显示样式，移动端适配  

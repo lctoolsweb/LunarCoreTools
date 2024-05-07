@@ -21,14 +21,16 @@
       <a-form-item>
         <a-space>
           <a-button html-type="submit">提交</a-button>
-          <a-button @click="copyTocken">复制Tocken</a-button>
+          <a-button html-type="reset" @click="handleReset">重置</a-button>
         </a-space>
       </a-form-item>
 
-      <!-- 新增的不可编辑文本框 -->
+      
       <a-form-item label="返回数据">
         <a-input v-model="responseData" :disabled="true" />
       </a-form-item>
+
+      
     </a-form>
   </div>
 </template>
@@ -46,9 +48,27 @@ const form = reactive({
   password: '',
   command: ''
 });
+const handleReset = () => {
+  
+  localStorage.clear();
+  
+  form.uid = "";
+  form.password = "";
+  form.command = "";
+  
+  responseData.value = "";
+  
+  showMessage.value = false;
+  messageType.value = "";
+  message.value = "";
+};
 
-// 新增响应数据的变量
+
 const responseData = ref('');
+
+const showMessage = ref(false);
+const messageType = ref<'error' | 'success' | ''>('');
+const message = ref('');
 
 const handleSubmit = () => {
   console.log(form);
@@ -62,8 +82,24 @@ const handleSubmit = () => {
 
   axios.post(Url, data).then(res => {
     console.log(res);
-    // 更新文本框内容
+    
     responseData.value = JSON.stringify(res.data, null, 2);
+
+    
+    if (res.data.retcode === 200) {
+      localStorage.setItem('address', form.ssl + form.ip + form.path);
+      localStorage.setItem('uid', form.uid);
+      localStorage.setItem('password', form.password);
+      
+      showMessage.value = true;
+      messageType.value = 'success';
+      message.value = '数据保存成功！';
+      Message.success('数据保存成功！');
+    } else {
+      showMessage.value = true;
+      messageType.value = 'error';
+      message.value = '数据保存失败！';
+    }
   },
   err => {
     Message.error(err.message);
@@ -75,3 +111,23 @@ const copyTocken = () => {
   console.log(1);
 };
 </script>
+
+<style lang="less" scoped>
+
+a-form {
+  margin-top: 20px;
+}
+
+a-form-item {
+  margin-bottom: 16px;
+}
+
+a-input-group {
+  display: flex;
+  align-items: center;
+}
+
+a-input-group > a-input {
+  margin-right: 8px;
+}
+</style>

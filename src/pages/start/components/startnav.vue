@@ -7,6 +7,7 @@
         </template>
         <template #title>{{ t('menu.main') }}</template>
         <a-menu-item v-for="(item, index) in datav" :key="item.path" @click="topath(item.path)">
+          
           {{ t(`menu.${item.name.toLowerCase()}`) }}
         </a-menu-item>
       </a-sub-menu>
@@ -38,6 +39,7 @@ const datav = reactive([
   { name: 'scene', path: "/start/scene" },
   { name: 'RemoteControl', path: "/start/control" }, // Modified key to match your translation
   { name: 'about', path: "/start/about" },
+  { name: 'suggest', path: "/start/suggest" },
 ])
 
 function topath(path: string) {
@@ -45,7 +47,7 @@ function topath(path: string) {
 }
 
 const selectedKey = ref([""])
-const isMobile = ref(false)
+const isMobile = ref(true)
 
 const checkMobile = () => {
   isMobile.value = window.innerWidth <= 768

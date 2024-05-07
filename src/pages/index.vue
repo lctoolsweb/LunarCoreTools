@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- 页面内容 -->
+    
     <div class="ct">
       <!-- 添加图片 -->
       <img src="https://img.morax.top/file/4b572184f3de63e1c361f.png" alt="Your Image" class="centered-image" />
@@ -12,9 +12,9 @@
         {{ translatedText.introduce }}
       </div>
       <div class="start">
-        <router-link to="/start/commuse" class="mr-3 flex-none w-[3.0625rem] md:w-auto leading-6 dark:text-slate-200">
-          {{ translatedText.start }}
-        </router-link>
+        <router-link to="/start/commuse" class="n-button n-button--info mr-3 flex-none w-[3.0625rem] md:w-auto leading-6 dark:text-slate-200">
+  <n-button  type="info" dashed> {{ translatedText.start }} </n-button>
+</router-link>
       </div>
     </div>
     <n-alert title="Tips" type="info" closable class="custom-info-alert">
@@ -23,7 +23,7 @@
           <IosAirplane />
         </n-icon>
       </template>
-      {{ t('main.version') }}
+      {{ t('main.version') }}，闲聊吹水群：124750952
     </n-alert>
     <!-- 将语言切换按钮移到右上角 -->
     <button class="language-toggle" @click="toggleLanguage">
@@ -41,7 +41,7 @@
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
 import { IosAirplane } from '@vicons/ionicons4';
-import { NAlert, NIcon } from 'naive-ui';
+import { NAlert, NIcon, NButton } from 'naive-ui';
 import { useI18n } from 'vue-i18n';
 
 const { t, locale } = useI18n();
@@ -103,6 +103,7 @@ const updateTranslatedText = () => {
   text-align: center;
 }
 
+
 .centered-image {
   width: 100%;
   max-width: 150px;
@@ -116,6 +117,7 @@ const updateTranslatedText = () => {
   font-size: 28px;
 }
 
+
 .introduce {
   margin-top: 10px;
   color: #545343;
@@ -126,7 +128,7 @@ const updateTranslatedText = () => {
 .start {
   margin-top: 10px;
   text-align: center;
-  font-size: 24px;
+  font-size: 96px;
 }
 
 .language-toggle {
@@ -140,6 +142,11 @@ const updateTranslatedText = () => {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+}
+.ct {
+  max-width: 90%; 
+  margin: 0 auto; 
+  text-align: center;
 }
 
 .language-toggle:hover {
@@ -166,6 +173,13 @@ const updateTranslatedText = () => {
 </style>
 
 <style lang="less">
+.n-button.n-button--info.n-button--blue {
+  background-color: blue !important;
+  color: white !important;
+}
+
+
+
 .ct {
   width: 500px;
   margin: auto;
@@ -234,3 +248,4 @@ const updateTranslatedText = () => {
   color: #666;
 }
 </style>
+

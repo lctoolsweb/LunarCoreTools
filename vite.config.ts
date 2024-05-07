@@ -39,7 +39,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       hmr: { overlay: false },
       port: VITE_PORT,
       open: false,
-      cors: false,
+      cors: true,
       host: '0.0.0.0',
       proxy,
       force: true

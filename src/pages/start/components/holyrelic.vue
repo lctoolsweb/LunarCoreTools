@@ -50,8 +50,8 @@
 
       <div class="generate">
         <a-input v-model="value" placeholder="" />
-        <a-button type="outline" @click="copyvalue">{{ t('main.copy') }}</a-button>
-        <a-button type="outline" v-if="appStore.isLogin" @click="send(value)">执行</a-button>
+        <a-button type="primary" shape="round" size="large" @click="copyvalue">复制</a-button>
+        <a-button type="primary" shape="round" size="large" @click="execute">执行</a-button>
       </div>
     </div>
   </div>
@@ -68,6 +68,8 @@ import { useAppStore } from '@/store/modules/app'
 import { useI18n } from 'vue-i18n'
 import { IosAirplane } from '@vicons/ionicons4'
 import { NAlert } from 'naive-ui';
+import axios from 'axios'
+
 const { t, locale } = useI18n()
 const { text, isSupported, copy } = useClipboard()
 const appStore = useAppStore()
@@ -75,7 +77,8 @@ const appStore = useAppStore()
 var holyrelicnamevalue = ref('')
 var holyrelicnmainvalue = ref('')
 var grade = ref(0)
-
+var modifiedValue = '';
+var xct = ''
 const value = computed(() => {
   var xct = ''
   options3.value.forEach((k) => {
@@ -92,6 +95,38 @@ const value = computed(() => {
 
   return `/give ${holyrelicnamevalue.value} lv${grade.value} s${modifiedValue}${xct} `
 })
+const execute = () => {
+  
+  const address = localStorage.getItem('address')
+  const uid = localStorage.getItem('uid')
+  const password = localStorage.getItem('password')
+
+  if (!address || !uid || !password) {
+    
+    Message.info('用户未登录，请重试')
+  } else {
+    
+    const command = `/give ${holyrelicnamevalue.value} lv${grade.value} s${modifiedValue}${xct} `
+    const data = { uid, password, command }
+
+    
+    axios.post(address, data)
+      .then(response => {
+        
+        if (response.data.retcode === 200) {
+          message.success('执行成功！')
+        } else {
+          message.error('执行失败！')
+        }
+        console.log(response)
+      })
+      .catch(error => {
+        
+        message.error('执行失败！')
+        console.error(error)
+      })
+  }
+}
 
 const options = reactive(holyrelicname)
 const options2 = reactive(holyrelicnmain)
@@ -198,6 +233,41 @@ onMounted(() => {
         width: 80px;
       }
     }
+  }
+}
+@media screen and (max-width: 768px) {
+  .commuse {
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .commuse-item {
+    margin: 18px 0 10px; 
+  }
+
+  .commuse-item > div:nth-child(1) {
+    width: auto; 
+    text-align: left; 
+    padding: 0; 
+    margin-bottom: 5px; 
+  }
+
+  .generate {
+    display: block; 
+    margin-left: 0; 
+    width: 100%; 
+    margin-bottom: 80px; 
+    margin-top: 10px; 
+    text-align: center; 
+  }
+  .generate > .arco-input {
+    margin-bottom: 10px; 
+  }
+  .generate button { 
+    display: block; 
+    width: 100%; 
+    margin-top: 10px; 
+    
   }
 }
 </style>
