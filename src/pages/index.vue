@@ -3,7 +3,7 @@
     
     <div class="ct">
       <!-- 添加图片 -->
-      <img src="https://img.morax.top/file/4b572184f3de63e1c361f.png" alt="Your Image" class="centered-image" />
+      <img src="https://img.morax.top/file/afa87f6176029fc5a0d7e.gif" alt="Your Image" class="centered-image" />
 
       <div class="title">
         {{ translatedText.title }}
