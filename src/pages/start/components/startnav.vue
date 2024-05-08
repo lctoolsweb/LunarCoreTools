@@ -40,6 +40,7 @@ const datav = reactive([
   { name: 'RemoteControl', path: "/start/control" }, // Modified key to match your translation
   { name: 'about', path: "/start/about" },
   { name: 'suggest', path: "/start/suggest" },
+
 ])
 
 function topath(path: string) {

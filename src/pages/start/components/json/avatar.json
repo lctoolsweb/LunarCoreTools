@@ -180,8 +180,16 @@
     "value": 1308  
   }, 
   { 
+    "label": "知更鸟", 
+    "value": 1309  
+  }, 
+  { 
     "label": "米沙", 
     "value": 1312  
+  }, 
+  { 
+    "label": "波提欧", 
+    "value": 1315  
   }, 
   { 
     "label": "{NICKNAME}", 
@@ -198,5 +206,13 @@
   { 
     "label": "{NICKNAME}", 
     "value": 8004  
-  } 
+  }, 
+  { 
+    "label": "{NICKNAME}", 
+    "value": 8005  
+  }, 
+  { 
+    "label": "{NICKNAME}", 
+    "value": 8006  
+  }
 ] 
