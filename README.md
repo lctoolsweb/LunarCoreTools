@@ -1,6 +1,6 @@
 中文 | [English](README_en-US.md)
 
-![LunarCoreTools](https://socialify.git.ci/lctoolsweb/LunarCoreTools/image?description=1&forks=1&issues=1&language=1&logo=https%3A%2F%2Fimg.morax.top%2Ffile%2F2578855f05450d5878252.png&name=1&pulls=1&stargazers=1&theme=Light)
+![LunarCoreTools](https://socialify.git.ci/lctoolsweb/LunarCoreTools/image?description=1&font=Jost&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto)
 **因学业等诸多原因，本项目更新节奏可能会放缓，若您想要参与开发或者接手项目，请提交pr或issue**
 
 ## 免责声明
