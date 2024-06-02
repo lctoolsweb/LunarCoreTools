@@ -1,9 +1,8 @@
 <template>
   <div>
-    
     <div class="ct">
       <!-- 添加图片 -->
-      <img src="https://img.morax.top/file/afa87f6176029fc5a0d7e.gif" alt="Your Image" class="centered-image" />
+      <img src="https://ooo.0x0.ooo/2024/06/02/OJH6MG.jpg" alt="Image" class="centered-image" />
 
       <div class="title">
         {{ translatedText.title }}
@@ -13,8 +12,8 @@
       </div>
       <div class="start">
         <router-link to="/start/commuse" class="n-button n-button--info mr-3 flex-none w-[3.0625rem] md:w-auto leading-6 dark:text-slate-200">
-  <n-button  type="info" dashed> {{ translatedText.start }} </n-button>
-</router-link>
+          <n-button type="info" dashed>{{ translatedText.start }}</n-button>
+        </router-link>
       </div>
     </div>
     <n-alert title="Tips" type="info" closable class="custom-info-alert">
@@ -34,6 +33,19 @@
     <div class="footer">
       {{ t('main.views') }} {{ pageViews }} {{ t('main.time') }}
     </div>
+
+    <!-- 弹窗 -->
+    <div v-if="showAlert" class="alert-overlay"></div>
+    <div v-if="showAlert" class="alert-container">
+      <div class="alert-text">
+        检测到版本更新，当前版本为强制更新，请前往 GitHub 更新
+      </div>
+      <div class="alert-btn">
+        <a href="https://github.com/lctoolsweb/LunarCoreTools" target="_blank">
+          <button>前往</button>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -46,6 +58,7 @@ import { useI18n } from 'vue-i18n';
 
 const { t, locale } = useI18n();
 const isChinese = ref(true);
+const showAlert = ref(false);
 
 const translatedText = {
   title: t('ct.title'),
@@ -75,9 +88,7 @@ onMounted(() => {
   locale.value = isChinese.value ? 'zh' : 'en';
 
   // Update translatedText if needed
-  translatedText.title = t('ct.title');
-  translatedText.introduce = t('ct.introduce');
-  translatedText.start = t('ct.start');
+  updateTranslatedText();
 });
 
 // 切换语言的方法
@@ -93,9 +104,57 @@ const updateTranslatedText = () => {
   translatedText.introduce = t('ct.introduce');
   translatedText.start = t('ct.start');
 };
+
+// 获取最新版本号
+const currentVersion = '0.1.4'; 
+const latestVersion = ref('');  
+
+const fetchLatestVersion = async () => {
+  try {
+    const response = await axios.get('https://api.github.com/repos/lctoolsweb/LunarCoreTools/releases');
+    if (response.data && response.data.length > 0) {
+      latestVersion.value = response.data[0].tag_name;
+      if (latestVersion.value > currentVersion) {
+        showAlert.value = true; 
+      }
+    }
+  } catch (error) {
+    console.error('Failed to fetch latest version:', error);
+  }
+};
+
+onMounted(() => {
+  fetchLatestVersion();
+});
+
+const closeAlert = () => {
+  showAlert.value = false;
+};
 </script>
 
 <style lang="less">
+.alert-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色 */
+  z-index: -1; /* 放在底层 */
+}
+
 .ct {
   width: 500px;
   margin: auto;
@@ -170,9 +229,7 @@ const updateTranslatedText = () => {
   font-size: 14px;
   color: #666;
 }
-</style>
 
-<style lang="less">
 .n-button.n-button--info.n-button--blue {
   background-color: blue !important;
   color: white !important;
@@ -237,6 +294,41 @@ const updateTranslatedText = () => {
   top: 120px;
   right: 20px;
 }
+.alert-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.alert-text {
+  text-align: center;
+  font-size: 18px;
+}
+
+.alert-btn {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.alert-btn button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.alert-btn button:hover {
+  background-color: #0056b3;
+}
 
 /* Add styles for the footer */
 .footer {
@@ -247,5 +339,13 @@ const updateTranslatedText = () => {
   font-size: 14px;
   color: #666;
 }
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px); /* 高斯模糊效果 */
+  z-index: 9999; /* 放在弹窗上面 */
+}
 </style>
-
