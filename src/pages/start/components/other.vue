@@ -45,12 +45,16 @@ const options = reactive([
     value: '/giveall materials',
   },
   {
-    title: '站场角色满级',
-    value: '/avatar lv80 s10',
+    title: '获得所有手机壁纸、头像、聊天气泡',
+    value: '/giveall usables',
   },
   {
-    title: '均衡等级6',
-    value: '/worldlevel 6',
+    title: '所有角色满级满星魂满行迹',
+    value: '/avatar all lv80 p6 e6 s12',
+  },
+  {
+    title: '所有角色0星魂',
+    value: '/avatar all e0',
   },
   {
     title: '开拓等级满级',
@@ -71,6 +75,10 @@ const options = reactive([
   {
     title: '回满血',
     value: '/heal',
+  },
+  {
+    title: '回满能量',
+    value: '/energy',
   },
   {
     title: '在世界中补充战技点',
