@@ -9,6 +9,7 @@ dist-ssr
 .env.*.local
 .eslintcache
 .vs
+.vscode
 
 
 # Log files
