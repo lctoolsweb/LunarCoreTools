@@ -67,14 +67,8 @@ let constantRoutes = [
         path: "/start/personnel",
         component: () => import('@/pages/start/components/personnel.vue'),
       },
-      {
-        path: "/start/login",
-        component: () => import('@/pages/start/GCAuth/login.vue'),
-      },
-      {
-        path: "/start/register",
-        component: () => import('@/pages/start/GCAuth/register.vue'),
-      },
+      
+      
       {
         path: "/start/avatar",
         component: () => import('@/pages/start/components/avatar.vue'),
@@ -87,10 +81,7 @@ let constantRoutes = [
         path: "/start/page1",
         component: () => import('@/pages/start/components/page1.vue'),
       },
-      {
-        path: "/start/changepassword",
-        component: () => import('@/pages/start/GCAuth/changepassword.vue'),
-      },
+      
       {
         path: "/start/scene",
         component: () => import('@/pages/start/components/scene.vue'),
