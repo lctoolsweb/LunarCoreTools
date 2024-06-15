@@ -4,12 +4,12 @@
 **因学业等诸多原因，本项目更新节奏可能会放缓，若您想要参与开发或者接手项目，请提交pr或issue**
 
 ## 免责声明
+本项目只是用于学习TypeScript与vue相关的知识，切勿用于非法用途。请不要在无关的地方宣传LunarCoreTools。  
 本项目完全遵守相关的开源协议，您可以根据自己的意愿自由地更改源码  
 因用于商业用途而导致的任何法律后果，包括但不限于损失、责任、索赔或其他相关事宜，本项目的开发者概不负责。  
 使用者需自行承担使用本项目的风险，并在遵循 MIT 许可证的前提下自行评估和处理相关的法律责任。  
 **因不符合规定的商业行为，我们已经暂停示例页面的访问，使用者需自行搭建并承担可能带来的相关法律责任。**
-## 远程命令
-工具现在已经支持远程命令，因官方核心并未支持相关请求，所以您需要使用我们的转发服务端，详见[这里](https://github.com/lctoolsweb/lct-transmit)
+
 
 ## 耻辱柱
 ＊＊Lunarcore及其他任何衍生工具都是免费软件。
@@ -20,7 +20,7 @@
 The page will automatically adjust the language according to the current browser language, currently only supports Chinese, English, and some translation work has not yet been completed, if you want to contribute to the internationalization of the project, please submit a PR.
 
 ## 运行环境
-*node 18*，其他版本不保证能稳定运行.下方所有命令请在Windows终端中运行
+*node 18*，其他版本不保证能稳定运行.
 
 ## 安装依赖(手动安装)
 `
@@ -34,7 +34,7 @@ npm run dev
 
 ## 打包build运行(推荐)
 `
-npm run build:pro
+npm run build:pro  
 `
 `
 npm install http-server  
