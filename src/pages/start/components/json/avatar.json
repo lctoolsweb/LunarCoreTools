@@ -183,10 +183,18 @@
     "label": "知更鸟", 
     "value": 1309  
   }, 
+  {
+    "label": "流萤",
+    "value": 1310
+  },
   { 
     "label": "米沙", 
     "value": 1312  
   }, 
+  {
+    "label": "翡翠",
+    "value": 1314
+  },
   { 
     "label": "波提欧", 
     "value": 1315  
