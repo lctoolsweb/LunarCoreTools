@@ -106,7 +106,7 @@ const updateTranslatedText = () => {
 };
 
 // 获取最新版本号
-const currentVersion = '0.1.4'; 
+const currentVersion = '0.1.5'; 
 const latestVersion = ref('');  
 
 const fetchLatestVersion = async () => {
