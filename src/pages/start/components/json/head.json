@@ -350,5 +350,33 @@
     {
         "label": "「嗨，来测」",
         "value": 202108
+    },
+    {
+        "label": "{NICKNAME}•毁灭",
+        "value": 208001
+    },
+    {
+        "label": "{NICKNAME}•毁灭",
+        "value": 208002
+
+    },
+    {
+        "label": "{NICKNAME}•存护",
+        "value": 208003
+    },
+    {
+        "label": "{NICKNAME}•存护",
+        "value": 208004
+
+    },
+    {
+        "label": "{NICKNAME}•同谐",
+        "value": 208005
+
+    },
+    {
+        "label": "{NICKNAME}•同谐",
+        "value": 208006
+
     }
 ]
