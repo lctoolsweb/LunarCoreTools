@@ -34,15 +34,15 @@
       {{ t('main.views') }} {{ pageViews }} {{ t('main.time') }}
     </div>
 
-    <!-- 弹窗 -->
+    
     <div v-if="showAlert" class="alert-overlay"></div>
     <div v-if="showAlert" class="alert-container">
       <div class="alert-text">
-        检测到版本更新，当前版本为强制更新，请前往 GitHub 更新
+        当前版本已过时，请前往GitHub更新。
       </div>
       <div class="alert-btn">
         <a href="https://github.com/lctoolsweb/LunarCoreTools" target="_blank">
-          <button>前往</button>
+          <button>确认</button>
         </a>
       </div>
     </div>
@@ -68,7 +68,7 @@ const translatedText = {
 
 const pageViews = ref(0);
 
-// Define a separate async function to fetch page views
+
 const fetchPageViews = async () => {
   try {
     const response = await axios.get('https://finicounter.eu.org/counter?host=lctoolsweb.vercel.app');
@@ -78,36 +78,35 @@ const fetchPageViews = async () => {
   }
 };
 
-// Call the async function inside onMounted
+
 onMounted(() => {
   fetchPageViews();
 
-  // Existing code for language toggle and other features
+  
   const browserLanguage = navigator.language.toLowerCase();
   isChinese.value = browserLanguage.startsWith('zh');
   locale.value = isChinese.value ? 'zh' : 'en';
 
-  // Update translatedText if needed
+  
   updateTranslatedText();
 });
 
-// 切换语言的方法
+
 const toggleLanguage = () => {
-  locale.value = isChinese.value ? 'en' : 'zh'; // 切换语言
-  isChinese.value = !isChinese.value; // 切换按钮文字
-  updateTranslatedText(); // 更新翻译文本
+  locale.value = isChinese.value ? 'en' : 'zh'; 
+  isChinese.value = !isChinese.value; 
+  updateTranslatedText(); 
 };
 
-// 更新翻译文本
+
 const updateTranslatedText = () => {
   translatedText.title = t('ct.title');
   translatedText.introduce = t('ct.introduce');
   translatedText.start = t('ct.start');
 };
 
-// 获取最新版本号
-const currentVersion = '0.1.5'; 
-const latestVersion = ref('');  
+const currentVersion = import.meta.env.VITE_APP_CURRENT_VERSION;
+const latestVersion = ref('');
 
 const fetchLatestVersion = async () => {
   try {
@@ -115,7 +114,7 @@ const fetchLatestVersion = async () => {
     if (response.data && response.data.length > 0) {
       latestVersion.value = response.data[0].tag_name;
       if (latestVersion.value > currentVersion) {
-        showAlert.value = true; 
+        showAlert.value = true;
       }
     }
   } catch (error) {
@@ -131,6 +130,7 @@ const closeAlert = () => {
   showAlert.value = false;
 };
 </script>
+
 
 <style lang="less">
 .alert-wrapper {

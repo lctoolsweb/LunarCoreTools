@@ -16,7 +16,7 @@ const options: I18nOptions = {
         text2: "请输入数量",
         execute: "执行",
         tips: "请先在下方的输入框中输入一个数字，然后再勾选属性词条，例如1代表该词条强化一次",
-        version:"工具版本v0.1.5 游戏版本2.3.0",
+        version:"工具版本v0.1.6 游戏版本2.3.0",
         views:"截至目前,LunarCoreWebTools已经被安装/访问了",
         time:"次   © 2024 lctoolsweb",
         introduce:"适用于LunarCore的web命令生成器",
