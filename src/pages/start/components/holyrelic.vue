@@ -194,12 +194,13 @@ onMounted(() => {
   align-items: center;
   color: #000;
   margin: 18px 0;
-
+  color: #6b6a6a !important;
   >div {
     &:nth-child(1) {
       width: 150px;
       text-align: right;
       padding-right: 10px;
+      color: #6b6a6a !important;
     }
   }
 }
@@ -208,6 +209,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   margin-left: 100px;
+  color: #6b6a6a !important;
 }
 
 .smallho {
@@ -219,6 +221,7 @@ onMounted(() => {
   position: fixed;
   top: 42px;
   right: 12px;
+  color: #6b6a6a !important;
 }
 
   .smallho-item {
@@ -227,10 +230,11 @@ onMounted(() => {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-
+    color: #6b6a6a !important;
     >div {
       &:nth-child(3) {
         width: 80px;
+        color: #6b6a6a !important;
       }
     }
   }

@@ -93,6 +93,7 @@ onMounted(() => {
       width: 150px;
       text-align: right;
       padding-right: 10px;
+      color: #6b6a6a !important;
     }
   }
 }

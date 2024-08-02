@@ -1,6 +1,5 @@
 import { UserConfig, ConfigEnv } from 'vite';
 import path from 'path';
-import fs from 'fs';
 import { createVitePlugins } from './config/vite/plugins';
 import proxy from './config/vite/proxy';
 import { VITE_DROP_CONSOLE, VITE_PORT } from './config/constant';
@@ -10,9 +9,10 @@ function resovePath(paths: string) {
   return path.resolve(__dirname, paths);
 }
 
-export default ({ command, mode }: ConfigEnv): UserConfig => {
+export default async ({ command, mode }: ConfigEnv): Promise<UserConfig> => {
   const isBuild = command === 'build';
-  console.log(command, mode);
+  console.log('Command:', command);
+  console.log('Mode:', mode);
 
   const viteConfig: UserConfig = {
     resolve: {
@@ -22,11 +22,10 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         "@components": resovePath('./src/components'),
         '@utils': resovePath('./src/utils'),
         '@api': resovePath('./src/api'),
-        
       }
     },
     base: "./",
-    plugins: createVitePlugins(isBuild),
+    plugins: await createVitePlugins(isBuild),
     css: {
       preprocessorOptions: {
         less: {
@@ -56,10 +55,11 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       rollupOptions: {
         external: [],
       },
-      watch: {},
       chunkSizeWarningLimit: 2000,
     },
   };
+
+  console.log('Vite config:', viteConfig);
 
   return viteConfig;
 };

@@ -5,7 +5,7 @@
 import type { Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { ConfigSvgIconsPlugin } from './svgIcons'
+
 import { AutoRegistryComponents } from './component'
 import { AutoImportDeps } from './autoImport'
 import { ConfigMockPlugin } from './mock'
@@ -33,7 +33,7 @@ export function createVitePlugins(isBuild: boolean) {
   ]
 
   // vite-plugin-svg-icons
-  vitePlugins.push(ConfigSvgIconsPlugin(isBuild))
+  
 
   // vite-plugin-mock
   vitePlugins.push(ConfigMockPlugin(isBuild))

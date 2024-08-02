@@ -146,10 +146,11 @@ onMounted(() => {
     display: flex;
     align-items: center;
     color: #000;
-
+    color: #6b6a6a !important;
     > div {
       &:nth-child(1) {
         width: 130px;
+        color: #6b6a6a !important;
       }
 
       margin: 0 5px;

@@ -5,6 +5,7 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AAlert: typeof import('@arco-design/web-vue')['Alert']
     AButton: typeof import('@arco-design/web-vue')['Button']
     ACascader: typeof import('@arco-design/web-vue')['Cascader']
     ACheckbox: typeof import('@arco-design/web-vue')['Checkbox']
@@ -18,8 +19,6 @@ declare module '@vue/runtime-core' {
     AMenu: typeof import('@arco-design/web-vue')['Menu']
     AMenuItem: typeof import('@arco-design/web-vue')['MenuItem']
     APageHeader: typeof import('@arco-design/web-vue')['PageHeader']
-    ARadio: typeof import('@arco-design/web-vue')['Radio']
-    ARadioGroup: typeof import('@arco-design/web-vue')['RadioGroup']
     ASelect: typeof import('@arco-design/web-vue')['Select']
     ASpace: typeof import('@arco-design/web-vue')['Space']
     ASubMenu: typeof import('@arco-design/web-vue')['SubMenu']
@@ -28,7 +27,6 @@ declare module '@vue/runtime-core' {
     Header: typeof import('./components/Header/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SvgIcon: typeof import('./components/SvgIcon/index.vue')['default']
     Watermark: typeof import('./components/Watermark.vue')['default']
   }
 }
