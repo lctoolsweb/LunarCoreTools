@@ -2,6 +2,9 @@
 
 ![LunarCoreTools](https://socialify.git.ci/lctoolsweb/LunarCoreTools/image?description=1&font=Jost&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto)
 **因学业等诸多原因，本项目更新节奏可能会放缓，若您想要参与开发或者接手项目，请提交pr或issue**
+# 📣📣重要通知
+**使用本工具时，请遵守相关的开源协议。您可以将项目内的Q群等元素更改为您自己的，但是，请不要修改项目内指向本仓库的Github徽标，否则，您将会出现在本项目的耻辱柱上**
+
 
 ## 免责声明
 本项目只是用于学习TypeScript与vue相关的知识，切勿用于非法用途。请不要在无关的地方宣传LunarCoreTools。  
